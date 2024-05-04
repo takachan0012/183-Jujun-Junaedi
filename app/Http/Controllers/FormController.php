@@ -24,6 +24,6 @@ class FormController extends Controller
         // You can save it to the database, perform additional actions, etc.
 
         // Return a response
-        return "Form submitted successfully. Username: $username, Email: $email, password: $password ";
+        return "Form submitted successfully. Username: $username, $email, $password";
     }
 }
