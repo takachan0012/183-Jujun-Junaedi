@@ -14,3 +14,11 @@ Route::get('/about', function () {
 });
 
 Route::post('submit-form', [FormController::class, 'submitForm'])->name('submit-form');
+
+Route::get('login', function () {
+    return view('login');
+});
+
+Route::get('register', function () {
+    return view('register');
+});
