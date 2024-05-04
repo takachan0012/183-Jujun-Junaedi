@@ -16,9 +16,9 @@ Route::get('/about', function () {
 Route::post('submit-form', [FormController::class, 'submitForm'])->name('submit-form');
 
 Route::get('login', function () {
-    return view('login');
+    return view('login', ['title' => 'login']);
 });
 
 Route::get('register', function () {
-    return view('register');
+    return view('register', ['title' => 'register']);
 });

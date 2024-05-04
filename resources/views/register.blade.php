@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot:title>{{ $title }}</x-slot:title>
     <div class="w-screen h-screen flex justify-center items-center">
         <div class="w-96">
             <div class="flex items-center my-9 flex-col justify-center">
