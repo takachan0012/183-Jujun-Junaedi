@@ -20,6 +20,10 @@ Route::get('login', function () {
     return view('login', ['title' => 'login']);
 });
 
+Route::get('dashboard', function () {
+    return view('dashboard', ['title' => 'dashboard']);
+});
+
 Route::get('register', function () {
     return view('register', ['title' => 'register']);
 });
