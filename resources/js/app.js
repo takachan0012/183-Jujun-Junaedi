@@ -1,4 +1,4 @@
 import './bootstrap';
-import { clickMe } from './script';
+import { togglePasswordVisibility } from './script';
 
-window.clickMe = clickMe;
+window.togglePasswordVisibility = togglePasswordVisibility;
