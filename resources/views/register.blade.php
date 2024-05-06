@@ -12,7 +12,7 @@
                     kunciKas
                 </h1>
             </div>
-            <form action="{{ route('submit-form') }}" method="post" class="w-full flex flex-col gap-3">
+            <form action="{{ route('register-successfully') }}" method="post" class="w-full flex flex-col gap-3">
                 @csrf
                 <x-label-input>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"

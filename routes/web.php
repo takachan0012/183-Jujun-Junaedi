@@ -13,7 +13,8 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::post('submit-form', [FormController::class, 'submitForm'])->name('submit-form');
+Route::post('register-successfully', [FormController::class, 'register'])->name('register-successfully');
+Route::post('login-successfully', [FormController::class, 'login'])->name('login-successfully');
 
 Route::get('login', function () {
     return view('login', ['title' => 'login']);
