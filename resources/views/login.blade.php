@@ -25,9 +25,6 @@
                     <input type="text" class="grow" placeholder="Email" name="email" required />
                 </x-label-input>
                 <x-password-input />
-                @error('password')
-                    <span class="text-red-500">Password harus lebih dari 8 karakterr</span>
-                @enderror
                 <button type="submit" class="btn btn-primary">Masuk</button>
                 <div>
                     <span>Belum punya akun? </span><a href="/register" class="underline hover:no-underline">Daftar</a>
