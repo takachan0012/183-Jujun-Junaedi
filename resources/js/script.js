@@ -14,5 +14,25 @@ function togglePasswordVisibility() {
     }
 }
 
+function showContent(contentNum) {
+    // Hide all content paragraphs
+    document.getElementById('content1').style.display = 'none';
+    document.getElementById('content2').style.display = 'none';
+    document.getElementById('content3').style.display = 'none';
 
-export { togglePasswordVisibility };
+    // Show the content paragraph corresponding to the clicked button
+    document.getElementById('content' + contentNum).style.display = 'block';
+
+    // Remove the red border from all buttons
+    document.getElementById('button1').classList.remove('border-l-2', 'border-red-500', 'text-red-500');
+    document.getElementById('button2').classList.remove('border-l-2', 'border-red-500', 'text-red-500');
+    document.getElementById('button3').classList.remove('border-l-2', 'border-red-500', 'text-red-500');
+
+    // Add the border left to the clicked button
+    document.getElementById('button' + contentNum).classList.add('border-l-2', 'border-red-500', 'text-red-500');
+
+}
+
+
+
+export { togglePasswordVisibility, showContent };

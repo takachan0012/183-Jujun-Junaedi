@@ -1,4 +1,5 @@
 import './bootstrap';
-import { togglePasswordVisibility } from './script';
+import { showContent, togglePasswordVisibility } from './script';
 
 window.togglePasswordVisibility = togglePasswordVisibility;
+window.showContent = showContent;
