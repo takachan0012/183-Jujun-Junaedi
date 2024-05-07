@@ -24,12 +24,12 @@ function showContent(contentNum) {
     document.getElementById('content' + contentNum).style.display = 'block';
 
     // Remove the red border from all buttons
-    document.getElementById('button1').classList.remove('border-l-2', 'border-red-500', 'text-red-500');
-    document.getElementById('button2').classList.remove('border-l-2', 'border-red-500', 'text-red-500');
-    document.getElementById('button3').classList.remove('border-l-2', 'border-red-500', 'text-red-500');
+    document.getElementById('button1').classList.remove('border-r-2', 'border-red-500', 'text-red-500');
+    document.getElementById('button2').classList.remove('border-r-2', 'border-red-500', 'text-red-500');
+    document.getElementById('button3').classList.remove('border-r-2', 'border-red-500', 'text-red-500');
 
     // Add the border left to the clicked button
-    document.getElementById('button' + contentNum).classList.add('border-l-2', 'border-red-500', 'text-red-500');
+    document.getElementById('button' + contentNum).classList.add('border-r-2', 'border-red-500', 'text-red-500');
 
 }
 
