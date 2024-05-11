@@ -7,7 +7,7 @@ use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['title' => 'Welcome || kunciKas']);
 });
 Route::get('/about', function () {
     return view('about');
@@ -19,10 +19,6 @@ Route::post('login-successfully', [FormController::class, 'login'])->name('login
 Route::get('login', function () {
     return view('login', ['title' => 'login']);
 });
-
-// Route::get('dashboard', function () {
-//     return view('dashboard', ['title' => 'dashboard']);
-// });
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/', function () {
