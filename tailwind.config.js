@@ -8,10 +8,11 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    colors: {
-      'green-primary': '#1db753'
+    extend: {
+      colors: {
+        'green-primary': '#1db753'
+      },
     },
-    extend: {},
   },
   plugins: [
     daisyui,
