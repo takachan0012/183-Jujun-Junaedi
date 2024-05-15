@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\FormController;
+namespace App\Http\Controllers\Auth;
 
+use App\Http\Controllers\Auth;
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,9 +18,8 @@ Route::get('/about', function () {
 Route::post('register-successfully', [FormController::class, 'register'])->name('register-successfully');
 Route::post('login-successfully', [FormController::class, 'login'])->name('login-successfully');
 
-Route::get('login', function () {
-    return view('login', ['title' => 'login']);
-});
+Route::get('/login', [Auth::class, 'login'])->name('login');
+Route::get('/register', [Auth::class, 'register'])->name('register');
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/', function () {
@@ -30,8 +31,4 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/transaction', function () {
         return view('transaction', ['content' => 'transaction']);
     });
-});
-
-Route::get('register', function () {
-    return view('register', ['title' => 'register']);
 });

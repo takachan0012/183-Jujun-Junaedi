@@ -18,7 +18,7 @@
                 <li class="hover:text-green-primary"><a href="#testimonials">Testimonials</a></li>
             </ul>
             <div class="w-1/4">
-                <a href="/register">
+                <a href={{ route('register') }}>
                     <x-button class="btn btn-primary justify-center">
                         <span>Launch the App</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -48,7 +48,7 @@
                     Ready to take control of your finances? Sign up for Kuncikas today and start simplifying your
                     bookkeeping journey.
                 </p>
-                <a href="/register" class="w-36 my-7">
+                <a href={{ route('register') }} class="w-36 my-7">
                     <x-button class="btn btn-primary justify-center">Sign Up</x-button>
                 </a>
             </div>
@@ -144,7 +144,7 @@
             <span>&copy;2024, Made With Love by <a href="https://github.com/takachan0012/183-Jujun-Junaedi"
                     class="hover:text-green-primary underline">takadotdev</a></span>
         </div>
-        <a href="/register">
+        <a href={{ route('register') }}>
             <x-button class="btn btn-primary w-32 justify-center">Sign Up
                 Now!</x-button>
         </a>
