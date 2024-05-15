@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot:title>Dashboard | kunciKas</x-slot:title>
     <div class="h-screen w-screen flex">
-        <div class="h-screen w-[20%]  border-r-2 border-[#ffffff0d]">
+        <div class="h-screen w-[20%] border-r-2 border-[#ffffff0d] lg:fixed">
             <div class="h-24">
                 <div class="h-full flex justify-center items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -13,22 +13,22 @@
                         kunciKas
                     </h1>
                 </div>
-                <div class="w-full flex justify-center">
-                    <ul class="menu lg:menu-horizontal bg-base-200 p-0">
-                        <li>
-                            <details>
-                                <summary class="flex items-center">
+                <div class="w-full my-4">
+                    <ul class="w-full menu lg:menu-horizontal p-0">
+                        <li class="w-full flex justify-center items-center">
+                            <details class="w-[70%]">
+                                <summary class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                     </svg>
                                     <div class="flex flex-col">
-                                        <span class="font-medium">Jujun</span>
-                                        <span class="font-light">role</span>
+                                        <span class="font-medium">Jujun Junaedi</span>
+                                        <span class="font-light">User</span>
                                     </div>
                                 </summary>
-                                <ul>
+                                <ul class="w-[70%] rounded-none">
                                     <li><a>Profile</a></li>
                                     <li><a>Logout</a></li>
                                 </ul>
@@ -77,9 +77,12 @@
                         </x-button>
                     </a>
                 </div>
+
             </div>
         </div>
-        {{ $content }}
+        <div class="h-[1000px] ml-[20%] w-full">
+            {{ $content }}
+        </div>
     </div>
     {{ $slot }}
 </x-layout>
