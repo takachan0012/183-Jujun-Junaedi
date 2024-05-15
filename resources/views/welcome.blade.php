@@ -120,7 +120,8 @@
                 Said About kuncikas
             </h2>
         </div>
-        <div class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md">
+        <div
+            class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md hover:border-green-primary hover:shadow-inner">
             <span class="text-2xl font-bold">"</span>
             <p>
                 Since using Kuncikas, I've saved countless hours on bookkeeping. It's intuitive, user-friendly, and has
@@ -128,7 +129,8 @@
             </p>
             <span class="text-md font-bold">~ Sarah, Small Business Owner</span>
         </div>
-        <div class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md">
+        <div
+            class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md hover:border-green-primary hover:shadow-inner">
             <span class="text-2xl font-bold">"</span>
             <p>
                 As a freelancer, staying on top of my finances is crucial. Kuncikas has made it incredibly easy to track
