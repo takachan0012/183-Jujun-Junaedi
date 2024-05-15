@@ -22,13 +22,13 @@ Route::get('login', function () {
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/', function () {
-        return view('dashboard', ['title' => 'dashboard', 'content' => 'dashboard']);
+        return view('dashboard', ['content' => 'dashboard']);
     });
     Route::get('/debt', function () {
-        return view('debt', ['title' => 'dashboard', 'content' => 'debt']);
+        return view('debt', ['content' => 'debt']);
     });
     Route::get('/transaction', function () {
-        return view('transaction', ['title' => 'dashboard', 'content' => 'transaction']);
+        return view('transaction', ['content' => 'transaction']);
     });
 });
 

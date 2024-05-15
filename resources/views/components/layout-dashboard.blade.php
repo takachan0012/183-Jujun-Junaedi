@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot:title>{{ $title }}</x-slot:title>
+    <x-slot:title>Dashboard | kunciKas</x-slot:title>
     <div class="h-screen w-screen flex">
         <div class="h-screen w-[20%]  border-r-2 border-[#ffffff0d]">
             <div class="h-24">
