@@ -37,7 +37,7 @@
                     </ul>
                 </div>
                 <div class="flex flex-col gap-3">
-                    <a href="/dashboard">
+                    <a href="/dashboard" class="hover:text-green-primary">
                         <x-button
                             class="{{ request()->is('dashboard') ? 'text-green-primary border-green-primary border-r-2' : '' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -50,7 +50,7 @@
                             </span>
                         </x-button>
                     </a>
-                    <a href="/dashboard/debt">
+                    <a href="/dashboard/debt" class="hover:text-green-primary">
                         <x-button
                             class="{{ request()->is('dashboard/debt') ? 'text-green-primary border-green-primary border-r-2' : '' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -63,7 +63,7 @@
                             </span>
                         </x-button>
                     </a>
-                    <a href="/dashboard/transaction">
+                    <a href="/dashboard/transaction" class="hover:text-green-primary">
                         <x-button
                             class="{{ request()->is('dashboard/transaction') ? 'text-green-primary border-green-primary border-r-2' : '' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
