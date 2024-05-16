@@ -1,35 +1,46 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
     <div class="w-screen flex justify-center sticky top-4">
-        <nav class="w-11/12 flex border-[1px] border-[#ffffff1a] p-4 my-4 rounded-full  bg-[#171212]">
-            <div class="pl-4 w-1/4 flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6 text-green-primary">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
-                </svg>
-                <h1 class="text-4xl font-bold text-green-primary">
-                    kunciKas
-                </h1>
+        <div class="w-11/12 navbar bg-base-100 border-[1px] border-[#ffffff1a] p-4 my-4 rounded-full">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-6 z-[1] p-2 shadow bg-base-100 rounded-box w-52 md:w-96 border-[1px] border-[#ffffff1a]">
+                        <li class="hover:text-green-primary"><a href="#about">Learn About kunciKas</a></li>
+                        <li class="hover:text-green-primary"><a href="#features">Features</a></li>
+                        <li class="hover:text-green-primary"><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <a href="/" class="btn text-xl lg:text-4xl text-green-primary">kunciKas</a>
             </div>
-            <ul class="w-1/2 flex items-center gap-4">
-                <li class="hover:text-green-primary"><a href="#about">Learn About kunciKas</a></li>
-                <li class="hover:text-green-primary"><a href="#features">Features</a></li>
-                <li class="hover:text-green-primary"><a href="#testimonials">Testimonials</a></li>
-            </ul>
-            <div class="w-1/4">
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li class="hover:text-green-primary"><a href="#about">Learn About kunciKas</a></li>
+                    <li class="hover:text-green-primary"><a href="#features">Features</a></li>
+                    <li class="hover:text-green-primary"><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
                 <a href={{ route('register') }}>
-                    <x-button class="btn btn-primary justify-center">
-                        <span>Launch the App</span>
+                    <x-button class="btn md:w-full w-24 btn-primary justify-center">
+                        <span class="hidden md:block">Launch the App</span>
+                        <span class="md:hidden">Launch</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6">
+                            stroke="currentColor" class="w-6 h-6 hidden md:block">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
                         </svg>
                     </x-button>
                 </a>
             </div>
-        </nav>
+        </div>
     </div>
     <div class="p-11 my-11">
         <div class="flex justify-between items-center">
