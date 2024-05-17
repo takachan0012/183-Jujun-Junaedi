@@ -42,124 +42,133 @@
             </div>
         </div>
     </div>
-    <div class="p-11 my-11">
-        <div class="flex justify-between items-center">
-            <div class="w-1/2 flex flex-col gap-2">
-                <span class="text-7xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text">The
-                    simple App
-                    For Managing Income and
-                    Expenses</span>
-                <p>
-                    Simplify your financial tracking and take control of your finances effortlessly with Kuncikas.
-                    Whether
-                    you're a freelancer, small business owner, or just want to stay on top of your personal finances,
-                    Kuncikas has you covered.
-                </p>
-                <p>
-                    Ready to take control of your finances? Sign up for Kuncikas today and start simplifying your
-                    bookkeeping journey.
-                </p>
-                <a href={{ route('register') }} class="w-36 my-7">
-                    <x-button class="btn btn-primary justify-center">Sign Up</x-button>
-                </a>
+    <div class="flex flex-col md:mx-9">
+        <div class="px-4 md:p-11 md:mt-11">
+            <div class="w-full flex flex-col-reverse md:flex-row md:justify-between items-center">
+                <div class="w-full md:w-1/2 flex flex-col gap-2">
+                    <span
+                        class="text-3xl md:text-5xl lg:text-7xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text">The
+                        simple App
+                        For Managing Income and
+                        Expenses</span>
+                    <p>
+                        Simplify your financial tracking and take control of your finances effortlessly with Kuncikas.
+                        Whether
+                        you're a freelancer, small business owner, or just want to stay on top of your personal
+                        finances,
+                        Kuncikas has you covered.
+                    </p>
+                    <a href={{ route('register') }} class="w-36 my-7">
+                        <x-button class="btn btn-primary justify-center">Sign Up</x-button>
+                    </a>
+                </div>
+                <img src="{{ asset('coworking-e-wallet-with-virtual-credit-cards.gif') }}"
+                    alt="virtual-credit-cards-icon" class="w-[200px] md:w-[350px] lg:w-[500px]">
             </div>
-            <img src="{{ asset('coworking-e-wallet-with-virtual-credit-cards.gif') }}" alt="virtual-credit-cards-icon"
-                class="w-[500px]">
         </div>
-    </div>
-    <div id="about" class="p-11 flex justify-center">
-        <div
-            class="w-1/2 border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md hover:border-green-primary hover:shadow-inner">
-            <h2 class="text-5xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text mb-3">About</h2>
-            <p>Your go-to solution for hassle-free bookkeeping. Say goodbye to complex spreadsheets
-                and
-                overwhelming financial software. With Kuncikas, managing your income, expenses, and more is as easy as a
-                few
-                taps on your phone or clicks on your computer.</p>
+        <div id="about" class="my-4 px-4 md:p-11 flex justify-center">
+            <div
+                class="md:w-3/4 border-[1px] border-[#ffffff1a] md:p-4 my-4 rounded-md md:hover:border-green-primary hover:shadow-inner">
+                <h2
+                    class="text-3xl md:text-5xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text mb-3">
+                    About
+                </h2>
+                <p>Your go-to solution for hassle-free bookkeeping. Say goodbye to complex spreadsheets
+                    and
+                    overwhelming financial software. With Kuncikas, managing your income, expenses, and more is as easy
+                    as a
+                    few
+                    taps on your phone or clicks on your computer.</p>
+            </div>
         </div>
-    </div>
-    <div id="features" class="p-11">
-        <h2 class="text-5xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text mb-7">Features</h2>
-        <div class="flex justify-evenly">
-            <ul class="flex flex-col gap-4">
-                <li class="flex items-center gap-2 ">
-                    <div
-                        class="w-16 h-16 bg-green-primary flex items-center justify-center rounded-full text-black text-2xl font-bold">
-                        1</div>
-                    <div>
-                        <h2 class="font-bold">Effortless Tracking:</h2>
-                        <p>Record your income and expenses effortlessly, anytime, anywhere.</p>
-                    </div>
-                </li>
-                <li class="flex items-center gap-2 ">
-                    <div
-                        class="w-16 h-16 bg-green-primary flex items-center justify-center rounded-full text-black text-2xl font-bold">
-                        2</div>
-                    <div>
-                        <h2 class="font-bold">Custom Categories:</h2>
-                        <p>Tailor your financial categories to suit your needs, making organization a breeze.</p>
-                    </div>
-                </li>
-                <li class="flex items-center gap-2 ">
-                    <div
-                        class="w-16 h-16 bg-green-primary flex items-center justify-center rounded-full text-black text-2xl font-bold">
-                        3</div>
-                    <div>
-                        <h2 class="font-bold">Smart Insights:</h2>
-                        <p>Gain valuable insights into your spending habits and financial trends with our intuitive
-                            reporting
-                            tools.</p>
-                    </div>
-                </li>
-                <li class="flex items-center gap-2 ">
-                    <div
-                        class="w-16 h-16 bg-green-primary flex items-center justify-center rounded-full text-black text-2xl font-bold">
-                        4</div>
-                    <div>
-                        <h2 class="font-bold">Secure Backup:</h2>
-                        <p>Rest easy knowing your financial data is securely backed up in the cloud.</p>
-                    </div>
-                </li>
-            </ul>
-            <img src="{{ asset('coworking-office-employees-doing-financial-market-analysis.png') }}"
-                alt="employee-doing-financial-icon">
-        </div>
-    </div>
-    <div id="testimonials" class="p-11 flex items-center gap-2">
-        <div class="h-60 w-[33%]">
-            <h2 class="text-5xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text mb-7">What People
-                Said About kuncikas
+        <div id="features" class="px-4 md:p-11">
+            <h2 class="text-5xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text mb-7">
+                Features
             </h2>
+            <div class="flex justify-between">
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-center gap-2 ">
+                        <div
+                            class="w-16 h-16 bg-green-primary flex items-center justify-center rounded-full text-black text-2xl font-bold">
+                            1</div>
+                        <div>
+                            <h2 class="font-bold">Effortless Tracking:</h2>
+                            <p>Record your income and expenses effortlessly, anytime, anywhere.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-2 ">
+                        <div
+                            class="w-16 h-16 bg-green-primary flex items-center justify-center rounded-full text-black text-2xl font-bold">
+                            2</div>
+                        <div>
+                            <h2 class="font-bold">Custom Categories:</h2>
+                            <p>Tailor your financial categories to suit your needs, making organization a breeze.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-2 ">
+                        <div
+                            class="w-16 h-16 bg-green-primary flex items-center justify-center rounded-full text-black text-2xl font-bold">
+                            3</div>
+                        <div>
+                            <h2 class="font-bold">Smart Insights:</h2>
+                            <p>Gain valuable insights into your spending habits and financial trends with our intuitive
+                                reporting
+                                tools.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-2 ">
+                        <div
+                            class="w-16 h-16 bg-green-primary flex items-center justify-center rounded-full text-black text-2xl font-bold">
+                            4</div>
+                        <div>
+                            <h2 class="font-bold">Secure Backup:</h2>
+                            <p>Rest easy knowing your financial data is securely backed up in the cloud.</p>
+                        </div>
+                    </li>
+                </ul>
+                <img src="{{ asset('coworking-office-employees-doing-financial-market-analysis.png') }}"
+                    alt="employee-doing-financial-icon">
+            </div>
         </div>
-        <div
-            class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md hover:border-green-primary hover:shadow-inner">
-            <span class="text-2xl font-bold">"</span>
-            <p>
-                Since using Kuncikas, I've saved countless hours on bookkeeping. It's intuitive, user-friendly, and has
-                transformed the way I manage my finances.
-            </p>
-            <span class="text-md font-bold">~ Sarah, Small Business Owner</span>
+        <div id="testimonials" class="p-11 flex items-center gap-2">
+            <div class="h-60 w-[33%]">
+                <h2 class="text-5xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text mb-7">What
+                    People
+                    Said About kuncikas
+                </h2>
+            </div>
+            <div
+                class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md hover:border-green-primary hover:shadow-inner">
+                <span class="text-2xl font-bold">"</span>
+                <p>
+                    Since using Kuncikas, I've saved countless hours on bookkeeping. It's intuitive, user-friendly, and
+                    has
+                    transformed the way I manage my finances.
+                </p>
+                <span class="text-md font-bold">~ Sarah, Small Business Owner</span>
+            </div>
+            <div
+                class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md hover:border-green-primary hover:shadow-inner">
+                <span class="text-2xl font-bold">"</span>
+                <p>
+                    As a freelancer, staying on top of my finances is crucial. Kuncikas has made it incredibly easy to
+                    track
+                    my
+                    income and expenses, allowing me to focus on growing my business.
+                </p>
+                <span class="text-md font-bold">~ John, Freelancer</span>
+            </div>
         </div>
-        <div
-            class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md hover:border-green-primary hover:shadow-inner">
-            <span class="text-2xl font-bold">"</span>
-            <p>
-                As a freelancer, staying on top of my finances is crucial. Kuncikas has made it incredibly easy to track
-                my
-                income and expenses, allowing me to focus on growing my business.
-            </p>
-            <span class="text-md font-bold">~ John, Freelancer</span>
-        </div>
+        <footer class="p-11 flex gap-2 items-center">
+            <div class="flex flex-col">
+                <span>Join thousands of satisfied users and experience the simplicity of Kuncikas for yourself.</span>
+                <span>&copy;2024, Made With Love by <a href="https://github.com/takachan0012/183-Jujun-Junaedi"
+                        class="hover:text-green-primary underline">takadotdev</a></span>
+            </div>
+            <a href={{ route('register') }}>
+                <x-button class="btn btn-primary w-32 justify-center">Sign Up
+                    Now!</x-button>
+            </a>
+        </footer>
     </div>
-    <footer class="p-11 flex gap-2 items-center">
-        <div class="flex flex-col">
-            <span>Join thousands of satisfied users and experience the simplicity of Kuncikas for yourself.</span>
-            <span>&copy;2024, Made With Love by <a href="https://github.com/takachan0012/183-Jujun-Junaedi"
-                    class="hover:text-green-primary underline">takadotdev</a></span>
-        </div>
-        <a href={{ route('register') }}>
-            <x-button class="btn btn-primary w-32 justify-center">Sign Up
-                Now!</x-button>
-        </a>
-    </footer>
 </x-layout>
