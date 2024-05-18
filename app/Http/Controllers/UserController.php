@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     public function dashboard()
     {
-        return view('users.dashboard', ['content' => 'Dashboard']);
+        return view('users.dashboard', ['content' => '']);
     }
     public function debt()
     {

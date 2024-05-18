@@ -80,9 +80,9 @@
 
             </div>
         </div>
-        <div class="h-[1000px] ml-[20%] w-full">
+        <div class="h-[1000px] ml-[20%] w-full p-4">
             {{ $content }}
+            {{ $slot }}
         </div>
     </div>
-    {{ $slot }}
 </x-layout>
