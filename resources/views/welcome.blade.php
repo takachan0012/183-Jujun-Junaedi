@@ -132,15 +132,17 @@
                     alt="employee-doing-financial-icon" class="w-[200px] md:w-[350px] lg:w-[500px]">
             </div>
         </div>
-        <div id="testimonials" class="p-11 flex items-center gap-2">
-            <div class="h-60 w-[33%]">
-                <h2 class="text-5xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text mb-7">What
+        <div id="testimonials" class="my-11 px-4 md:p-11 flex flex-col md:flex-row items-center gap-2">
+            <div class="h-fit md:h-60 w-full md:w-[33%] md:mb-7">
+                <h2
+                    class="text-3xl md:text-5xl lg:text-7xl bg-gradient-to-r from-slate-400 to-white text-transparent bg-clip-text">
+                    What
                     People
                     Said About kuncikas
                 </h2>
             </div>
             <div
-                class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md hover:border-green-primary hover:shadow-inner">
+                class="h-60 md:h-fit w-full md:w-[33%] border-[1px] border-[#ffffff1a] p-4 md:p-6 md:my-4 rounded-md hover:border-green-primary hover:shadow-inner">
                 <span class="text-2xl font-bold">"</span>
                 <p>
                     Since using Kuncikas, I've saved countless hours on bookkeeping. It's intuitive, user-friendly, and
@@ -150,7 +152,7 @@
                 <span class="text-md font-bold">~ Sarah, Small Business Owner</span>
             </div>
             <div
-                class="h-60 w-[33%] border-[1px] border-[#ffffff1a] p-4 my-4 rounded-md hover:border-green-primary hover:shadow-inner">
+                class="h-60 md:h-fit w-full md:w-[33%] border-[1px] border-[#ffffff1a] p-4 md:p-6 md:my-4 rounded-md hover:border-green-primary hover:shadow-inner">
                 <span class="text-2xl font-bold">"</span>
                 <p>
                     As a freelancer, staying on top of my finances is crucial. Kuncikas has made it incredibly easy to
@@ -161,7 +163,7 @@
                 <span class="text-md font-bold">~ John, Freelancer</span>
             </div>
         </div>
-        <footer class="p-11 flex gap-2 items-center">
+        <footer class="mb-7 px-4 md:p-11 flex flex-col md:flex-row gap-2 md:items-center">
             <div class="flex flex-col">
                 <span>Join thousands of satisfied users and experience the simplicity of Kuncikas for yourself.</span>
                 <span>&copy;2024, Made With Love by <a href="https://github.com/takachan0012/183-Jujun-Junaedi"
