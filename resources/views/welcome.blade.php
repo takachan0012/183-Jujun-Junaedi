@@ -88,28 +88,28 @@
             </h2>
             <div class="lg:-mt-9 flex flex-col-reverse md:items-center md:flex-row md:justify-between ">
                 <ul class="flex flex-col gap-4 list-image-[url(checkmark.png)]">
-                    <li class="flex items-center md:gap-2 ">
-                        {{-- <div
-                            class="w-9 h-9 lg:w-16 lg:h-16 bg-green-primary flex items-center justify-center rounded-md text-black text-base lg:text-2xl font-bold border border-red-500">
+                    <li class="flex gap-4 items-center md:gap-2 ">
+                        <div
+                            class="p-4 w-14 h-14 bg-green-primary flex items-center justify-center rounded-md lg:rounded-full text-black text-xl lg:text-2xl font-bold">
                             1
-                        </div> --}}
+                        </div>
                         <div>
                             <h2 class="font-bold">Effortless Tracking:</h2>
                             <p>Record your income and expenses effortlessly, anytime, anywhere.</p>
                         </div>
                     </li>
-                    <li class="flex items-center gap-6 md:gap-2 ">
+                    <li class="flex gap-4 items-center md:gap-2 ">
                         <div
-                            class="w-28 h-28 lg:w-16 lg:h-16 lg:bg-green-primary flex items-center justify-center lg:rounded-full text-black text-base lg:text-2xl font-bold">
+                            class="p-4 w-14 h-14 bg-green-primary flex items-center justify-center rounded-md lg:rounded-full text-black text-xl lg:text-2xl font-bold">
                             2</div>
                         <div>
                             <h2 class="font-bold">Custom Categories:</h2>
                             <p>Tailor your financial categories to suit your needs, making organization a breeze.</p>
                         </div>
                     </li>
-                    <li class="flex items-center gap-6 md:gap-2 ">
+                    <li class="flex gap-4 items-center md:gap-2 ">
                         <div
-                            class="w-28 h-28 lg:w-16 lg:h-16 lg:bg-green-primary flex items-center justify-center lg:rounded-full text-black text-base lg:text-2xl font-bold">
+                            class="p-4 w-14 h-14 bg-green-primary flex items-center justify-center rounded-md lg:rounded-full text-black text-xl lg:text-2xl font-bold">
                             3</div>
                         <div>
                             <h2 class="font-bold">Smart Insights:</h2>
@@ -118,9 +118,9 @@
                                 tools.</p>
                         </div>
                     </li>
-                    <li class="flex items-center gap-6 md:gap-2 ">
+                    <li class="flex gap-4 items-center md:gap-2 ">
                         <div
-                            class="w-28 h-28 lg:w-16 lg:h-16 lg:bg-green-primary flex items-center justify-center lg:rounded-full text-black text-base lg:text-2xl font-bold">
+                            class="p-4 w-14 h-14 bg-green-primary flex items-center justify-center rounded-md lg:rounded-full text-black text-xl lg:text-2xl font-bold">
                             4</div>
                         <div>
                             <h2 class="font-bold">Secure Backup:</h2>
