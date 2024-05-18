@@ -31,4 +31,242 @@
             </div>
         </a>
     </section>
+    <section class="my-4">
+        <div class="flex items-center mb-7 gap-11">
+            <h3 class="text-xl">Current Debt</h3>
+            <a href="{{ route('debt') }}" class="text-green-primary hover:underline">View All</a>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="table">
+                <!-- head -->
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Due Date</th>
+                        <th>Notes</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- row 1 -->
+                    <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
+                        <td>
+                            <div class="flex items-center gap-3">
+                                <div>
+                                    <div class="font-bold">Mikasa</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="text-green-primary">10,000</span>
+                            <br />
+                            <span class="text-xs">My Debt</span>
+                        </td>
+                        <td>
+                            <span>2 Juni 2023</span>
+                        </td>
+                        <td>
+                            <span class="line-clamp-2">For living
+                            </span>
+                        </td>
+                        <th>
+                            <button class="btn btn-ghost btn-xs">details</button>
+                        </th>
+                    </tr>
+                    <!-- row 2 -->
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-3">
+                                <div>
+                                    <div class="font-bold">Taka</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="text-red-500">10,000</span>
+                            <br />
+                            <span class="text-xs">Customer Debt</span>
+                        </td>
+                        <td>
+                            <span>2 Juni 2023</span>
+                        </td>
+                        <td>
+                            <span class="line-clamp-2">For living
+                            </span>
+                        </td>
+                        <th>
+                            <button class="btn btn-ghost btn-xs">details</button>
+                        </th>
+                    </tr>
+                    <!-- row 3 -->
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-3">
+                                <div>
+                                    <div class="font-bold">Eren Yeager</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="text-green-primary">30,000</span>
+                            <br />
+                            <span class="text-xs">My Debt</span>
+                        </td>
+                        <td>
+                            <span>2 Juni 2023</span>
+                        </td>
+                        <td>
+                            <span class="line-clamp-2">For living
+                            </span>
+                        </td>
+                        <th>
+                            <button class="btn btn-ghost btn-xs">details</button>
+                        </th>
+                    </tr>
+                    <!-- row 4 -->
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-3">
+                                <div>
+                                    <div class="font-bold">Sun Jing Woo</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="text-green-primary">10,000</span>
+                            <br />
+                            <span class="text-xs">My Debt</span>
+                        </td>
+                        <td>
+                            <span>2 Juni 2023</span>
+                        </td>
+                        <td>
+                            <span class="line-clamp-2">For living
+                            </span>
+                        </td>
+                        <th>
+                            <button class="btn btn-ghost btn-xs">details</button>
+                        </th>
+                    </tr>
+                </tbody>
+                <!-- foot -->
+            </table>
+        </div>
+    </section>
+    <section class="my-7">
+        <div class="flex items-center mb-7 gap-11">
+            <h3 class="text-xl">Last Transaction</h3>
+            <a href="{{ route('transaction') }}" class="text-green-primary hover:underline">View All</a>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="table">
+                <!-- head -->
+                <thead>
+                    <tr>
+                        <th>Notes</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-3">
+                                <div>
+                                    <div class="font-bold">Salary</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="text-green-primary">10,000</span>
+                        </td>
+                        <td>
+                            <span>Income</span>
+                        </td>
+                        <td>
+                            <span class="line-clamp-2">Paid Off
+                            </span>
+                        </td>
+                        <th>
+                            <button class="btn btn-ghost btn-xs">details</button>
+                        </th>
+                    </tr>
+                    <!-- row 2 -->
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-3">
+                                <div>
+                                    <div class="font-bold">Buy Coffee</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="text-red-500">10,000</span>
+                        </td>
+                        <td>
+                            <span>Expense</span>
+                        </td>
+                        <td>
+                            <span class="line-clamp-2">Paid Off
+                            </span>
+                        </td>
+                        <th>
+                            <button class="btn btn-ghost btn-xs">details</button>
+                        </th>
+                    </tr>
+                    <!-- row 3 -->
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-3">
+                                <div>
+                                    <div class="font-bold">Packet Data</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="text-red-500">30,000</span>
+                        </td>
+                        <td>
+                            <span>Expense</span>
+                        </td>
+                        <td>
+                            <span class="line-clamp-2">Debt
+                            </span>
+                        </td>
+                        <th>
+                            <button class="btn btn-ghost btn-xs">details</button>
+                        </th>
+                    </tr>
+                    <!-- row 4 -->
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-3">
+                                <div>
+                                    <div class="font-bold">Invest</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="text-green-primary">10,000</span>
+                        </td>
+                        <td>
+                            <span>Income</span>
+                        </td>
+                        <td>
+                            <span class="line-clamp-2">Debt
+                            </span>
+                        </td>
+                        <th>
+                            <button class="btn btn-ghost btn-xs">details</button>
+                        </th>
+                    </tr>
+                </tbody>
+                <!-- foot -->
+            </table>
+        </div>
+    </section>
 </x-layout-dashboard>
