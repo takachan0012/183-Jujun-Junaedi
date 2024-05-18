@@ -21,6 +21,7 @@ Route::post('login-successfully', [FormController::class, 'login'])->name('login
 Route::get('/login', [Auth::class, 'login'])->name('login');
 Route::get('/register', [Auth::class, 'register'])->name('register');
 Route::get('/reset-password', [Auth::class, 'resetPassword'])->name('resetPassword');
+Route::get('/update-password', [Auth::class, 'updatePassword'])->name('updatePassword');
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/', function () {

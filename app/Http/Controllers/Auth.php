@@ -16,4 +16,8 @@ class Auth extends Controller
     {
         return view('auth.resetPassword', ['title' => 'Reset Password']);
     }
+    public function updatePassword()
+    {
+        return view('auth.updatePassword', ['title' => 'Update Password']);
+    }
 }
