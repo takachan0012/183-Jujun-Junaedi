@@ -12,4 +12,8 @@ class Auth extends Controller
     {
         return view('auth.register', ['title' => 'register']);
     }
+    public function resetPassword()
+    {
+        return view('auth.resetPassword', ['title' => 'Reset Password']);
+    }
 }
