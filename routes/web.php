@@ -11,17 +11,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome', ['title' => 'Welcome || kunciKas']);
 });
-Route::get('/about', function () {
-    return view('about');
-});
 
 Route::post('register-successfully', [FormController::class, 'register'])->name('register-successfully');
 Route::post('login-successfully', [FormController::class, 'login'])->name('login-successfully');
 
-Route::get('/login', [Auth::class, 'login'])->name('login');
-Route::get('/register', [Auth::class, 'register'])->name('register');
-Route::get('/reset-password', [Auth::class, 'resetPassword'])->name('resetPassword');
-Route::get('/update-password', [Auth::class, 'updatePassword'])->name('updatePassword');
+Route::controller(Auth::class)->group(function () {
+    Route::get('/login', 'login')->name('login');
+    Route::get('/register', 'register')->name('register');
+    Route::get('/reset-password', 'resetPassword')->name('resetPassword');
+    Route::get('/update-password', 'updatePassword')->name('updatePassword');
+});
+
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/', function () {
