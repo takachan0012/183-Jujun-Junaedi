@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,15 +23,8 @@ Route::controller(Auth::class)->group(function () {
     Route::get('/update-password', 'updatePassword')->name('updatePassword');
 });
 
-
-Route::prefix('dashboard')->group(function () {
-    Route::get('/', function () {
-        return view('dashboard', ['content' => 'dashboard']);
-    });
-    Route::get('/debt', function () {
-        return view('debt', ['content' => 'debt']);
-    });
-    Route::get('/transaction', function () {
-        return view('transaction', ['content' => 'transaction']);
-    });
+Route::prefix('dashboard')->controller(UserController::class)->group(function () {
+    Route::get('/', 'dashboard')->name('dashboard');
+    Route::get('/debt', 'debt')->name('debt');
+    Route::get('/transaction', 'transaction')->name('transaction');
 });
