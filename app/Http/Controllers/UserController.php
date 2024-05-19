@@ -12,7 +12,7 @@ class UserController extends Controller
     }
     public function debt()
     {
-        return view('users.debt', ['content' => 'Debt']);
+        return view('users.debt', ['content' => '']);
     }
     public function transaction()
     {
