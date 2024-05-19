@@ -1,9 +1,9 @@
 <x-layout-dashboard>
     <x-slot:content>{{ $content }}</x-slot:content>
-    <div class="sticky top-4 bg-base-100 border-[1px] border-[#ffffff1a] rounded-md p-2">
+    <div class="z-10 fixed top-0 w-full p-4 bg-base-100 h-16">
         <h2 class="text-2xl">Welcome, Jujun Junaedi</h2>
     </div>
-    <section class="my-4 flex gap-2">
+    <section class="my-16 flex gap-2">
         <a href="{{ route('debt') }}" class="h-48 w-1/2">
             <div
                 class="p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-green-primary hover:shadow-[inset_1px_1px_10px_#1db753] hover:text-green-primary delay-100 transition-all ease-in flex flex-col items-center justify-center">
