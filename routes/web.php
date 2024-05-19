@@ -26,5 +26,6 @@ Route::controller(Auth::class)->group(function () {
 Route::prefix('dashboard')->controller(UserController::class)->group(function () {
     Route::get('/', 'dashboard')->name('dashboard');
     Route::get('/debt', 'debt')->name('debt');
+    Route::get('/debt/create', 'createDebt')->name('createDebt');
     Route::get('/transaction', 'transaction')->name('transaction');
 });

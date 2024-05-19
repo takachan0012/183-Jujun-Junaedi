@@ -8,14 +8,14 @@
             class="tab pb-11 hover:cursor-pointer sticky top-16 z-10 bg-base-100 mb-9" aria-label="Overview" checked />
         <div role="tabpanel" class="tab-content p-10 overflow-x-auto">
             <div class="flex gap-2 my-4">
-                <div
+                <a href="{{ route('createDebt') }}"
                     class="w-1/4 h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-green-primary hover:shadow-[inset_1px_1px_10px_#1db753] text-green-primary delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-9 h-9">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
                     <span>Create Debt</span>
-                </div>
+                </a>
                 <div class="w-1/4 h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-red-500 hover:shadow-[inset_1px_1px_10px_rgb(239_68_68)] text-red-500 delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer"
                     onclick="listCustomerDebt()">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
