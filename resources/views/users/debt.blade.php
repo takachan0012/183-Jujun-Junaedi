@@ -1,10 +1,12 @@
 <x-layout-dashboard>
     <x-slot:content>{{ $content }}</x-slot:content>
-    <div class="z-10 sticky top-4 bg-base-100 border-[1px] border-[#ffffff1a] rounded-md p-2 mb-7">
+    <div class="z-10 fixed top-0 w-full p-4 bg-base-100 h-28">
         <h2 class="text-2xl">Debt</h2>
     </div>
     <div role="tablist" class="tabs tabs-bordered">
-        <input type="radio" name="my_tabs_1" role="tab" class="tab pb-11" aria-label="Overview" checked />
+        <input type="radio" name="my_tabs_1" role="tab"
+            class="tab pb-11 hover:cursor-pointer sticky top-16 z-10 bg-base-100 mb-9" aria-label="Overview" checked />
+
         <div role="tabpanel" class="tab-content p-10 overflow-x-auto">
             <table class="table">
                 <!-- head -->
@@ -106,8 +108,8 @@
             </table>
         </div>
 
-        <input type="radio" name="my_tabs_1" role="tab" class="tab pb-11" aria-label="My Debt" />
-        {{-- <div role="tabpanel" class="tab-content p-10">Tab content 2</div> --}}
+        <input type="radio" name="my_tabs_1" role="tab"
+            class="tab pb-11 hover:cursor-pointer sticky top-16 z-10 bg-base-100 mb-9" aria-label="My Debt" />
         <div role="tabpanel" class="tab-content p-10 overflow-x-auto">
             <table class="table">
                 <!-- head -->
@@ -207,14 +209,15 @@
                 </tbody>
                 <!-- foot -->
             </table>
-            <div class="w-[20%] join grid grid-cols-2 my-4">
-                <button class="join-item btn btn-outline p-0 text-xs">Previous page</button>
-                <button class="join-item btn btn-outline p-0 text-xs">Next</button>
+            <div class="join">
+                <button class="join-item btn">«</button>
+                <button class="join-item btn">Page 1</button>
+                <button class="join-item btn">»</button>
             </div>
         </div>
 
-        <input type="radio" name="my_tabs_1" role="tab" class="tab pb-11" aria-label="Customer Debt" />
-        {{-- <div role="tabpanel" class="tab-content p-10">Tab content 3</div> --}}
+        <input type="radio" name="my_tabs_1" role="tab"
+            class="tab pb-11 hover:cursor-pointer sticky top-16 z-10 bg-base-100 mb-9" aria-label="Customer Debt" />
         <div role="tabpanel" class="tab-content p-10 overflow-x-auto">
             <table class="table">
                 <!-- head -->
@@ -314,9 +317,10 @@
                 </tbody>
                 <!-- foot -->
             </table>
-            <div class="w-[20%] join grid grid-cols-2 my-4">
-                <button class="join-item btn btn-outline p-0 text-xs">Previous page</button>
-                <button class="join-item btn btn-outline p-0 text-xs">Next</button>
+            <div class="join">
+                <button class="join-item btn">«</button>
+                <button class="join-item btn">Page 1</button>
+                <button class="join-item btn">»</button>
             </div>
         </div>
     </div>
