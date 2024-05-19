@@ -14,6 +14,16 @@ function togglePasswordVisibility() {
     }
 }
 
+function listCustomerDebt() {
+    const customerDebtRadio = document.querySelector('input[aria-label="Customer Debt"]');
+    customerDebtRadio.checked = true;
+}
+
+function listMyDebt() {
+    const MyDebtRadio = document.querySelector('input[aria-label="My Debt"]');
+    MyDebtRadio.checked = true;
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -36,4 +46,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-export { togglePasswordVisibility };
+export { togglePasswordVisibility, listCustomerDebt, listMyDebt };
