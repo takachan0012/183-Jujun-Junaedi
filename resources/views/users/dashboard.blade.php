@@ -3,7 +3,7 @@
     <div class="z-10 fixed top-0 w-full p-4 bg-base-100 h-16">
         <h2 class="text-2xl">Hello, Jujun Junaedi</h2>
     </div>
-    <section class="my-16 flex gap-2">
+    <section class="mt-16 flex gap-2">
         <a href="{{ route('debt') }}" class="h-48 w-1/2">
             <div
                 class="p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-green-primary hover:shadow-[inset_1px_1px_10px_#1db753] hover:text-green-primary delay-100 transition-all ease-in flex flex-col items-center justify-center">
@@ -31,7 +31,7 @@
             </div>
         </a>
     </section>
-    <section class="my-4">
+    <section>
         <div class="flex items-center mb-7 gap-11">
             <h3 class="text-xl">Current Debt</h3>
             <a href="{{ route('debt') }}" class="text-green-primary hover:underline">View All</a>
