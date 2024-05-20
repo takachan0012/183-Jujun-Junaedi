@@ -24,7 +24,7 @@
                     </thead>
                     <tbody>
                         <!-- row 1 -->
-                        <tr>
+                        <tr data-href="{{ route('userDebtDetail') }}" class="hover:cursor-pointer">
                             <td>
                                 <span class="font-bold">18 Mei 2023</span>
                             </td>
