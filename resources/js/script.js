@@ -43,6 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function formatCurrencyInput(input) {
+    const value = input.value.replace(/[^0-9]/g, ''); // Remove any non-digit characters
+    if (value.length > 0) {
+        const formattedValue = new Intl.NumberFormat('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 0
+        }).format(value);
+        input.value = formattedValue;
+    } else {
+        input.value = '';
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const numberInput = document.getElementById('currencyInput');
+    numberInput.addEventListener('input', function () {
+        // Format the input value
+        formatCurrencyInput(numberInput);
+    });
+});
+
+
 
 
 
