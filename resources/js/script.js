@@ -72,6 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial adjustment
     adjustHeight();
 
+    // Set the default date value
+    const dateInput = document.getElementById('dateInput');
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+    const day = String(today.getDate()).padStart(2, '0');
+    const formattedDate = `${year}-${month}-${day}`;
+    dateInput.value = formattedDate;
+
 });
 
 function formatCurrencyInput(input) {
