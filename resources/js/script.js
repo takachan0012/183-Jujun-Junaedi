@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = row.dataset.href;
         });
     });
+
+    const numberInput = document.getElementById('currencyInput');
+    numberInput.addEventListener('input', function () {
+        // Format the input value
+        formatCurrencyInput(numberInput);
+    });
 });
 
 function formatCurrencyInput(input) {
@@ -56,14 +62,6 @@ function formatCurrencyInput(input) {
         input.value = '';
     }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    const numberInput = document.getElementById('currencyInput');
-    numberInput.addEventListener('input', function () {
-        // Format the input value
-        formatCurrencyInput(numberInput);
-    });
-});
 
 function navigationBack() {
     window.history.back();
