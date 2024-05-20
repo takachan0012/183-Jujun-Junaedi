@@ -50,7 +50,7 @@
                 </thead>
                 <tbody>
                     <!-- row 1 -->
-                    <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
+                    <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
                         <td>
                             <div class="flex items-center gap-3">
                                 <div>

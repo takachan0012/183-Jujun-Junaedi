@@ -27,5 +27,6 @@ Route::prefix('dashboard')->controller(UserController::class)->group(function ()
     Route::get('/', 'dashboard')->name('dashboard');
     Route::get('/debt', 'debt')->name('debt');
     Route::get('/debt/create', 'createDebt')->name('createDebt');
+    Route::get('/debt/user', 'userDebt')->name('userDebt'); //using ID for prod ex: /debt/{id}
     Route::get('/transaction', 'transaction')->name('transaction');
 });

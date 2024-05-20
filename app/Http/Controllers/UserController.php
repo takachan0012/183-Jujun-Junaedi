@@ -18,6 +18,10 @@ class UserController extends Controller
     {
         return view('users.createDebt', ['content' => '']);
     }
+    public function userDebt()
+    {
+        return view('users.userDebt', ['content' => '']);
+    }
     public function transaction()
     {
         return view('users.transaction', ['content' => 'Transaction']);
