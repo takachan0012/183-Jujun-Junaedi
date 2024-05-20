@@ -36,17 +36,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Add click event listener to each row with data-href attribute
     document.querySelectorAll('tr[data-href]').forEach(row => {
         row.addEventListener('click', () => {
             window.location.href = row.dataset.href;
         });
     });
 
+
     const numberInput = document.getElementById('currencyInput');
     numberInput.addEventListener('input', function () {
         // Format the input value
         formatCurrencyInput(numberInput);
     });
+
+    // Get the textarea element
+    const textarea = document.querySelector('textarea[name="note"]');
+
+    // Function to adjust the height of the textarea
+    const adjustHeight = () => {
+        textarea.style.height = 'auto'; // Reset the height
+        textarea.style.height = `${textarea.scrollHeight}px`; // Set the height to the scrollHeight
+    };
+
+    // Adjust the height on input
+    textarea.addEventListener('input', adjustHeight);
+
+    // Adjust the height when the Enter key is pressed
+    textarea.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            adjustHeight();
+        }
+    });
+
+    // Initial adjustment
+    adjustHeight();
+
 });
 
 function formatCurrencyInput(input) {
