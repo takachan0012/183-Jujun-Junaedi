@@ -65,8 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function navigationBack() {
+    window.history.back();
+}
 
 
 
 
-export { togglePasswordVisibility, listCustomerDebt, listMyDebt };
+
+export { togglePasswordVisibility, listCustomerDebt, listMyDebt, navigationBack };

@@ -2,6 +2,7 @@
     <x-slot:content>{{ $content }}</x-slot:content>
     <div class="h-screen flex justify-center items-center flex-col">
         <div>
+            <x-button-back />
             <form action="">
                 <h2 class="text-2xl text-center">Create Debt</h2>
                 <div class="flex flex-col gap-4">
