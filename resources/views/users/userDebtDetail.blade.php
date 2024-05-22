@@ -6,7 +6,7 @@
                 <x-button-back class="w-28" />
                 {{-- IF DEBT CONNECTED TO TRANSACTION THIS ACTION HIDDEN --}}
                 <div class="flex justify-center items-center gap-4">
-                    <a href="" class="flex flex-col items-center">
+                    <a href="{{ route('updateDebtDetail') }}" class="flex flex-col items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
