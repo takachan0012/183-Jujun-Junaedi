@@ -2,7 +2,7 @@
     <x-slot:content>{{ $content }}</x-slot:content>
     <x-toastify title="Update Successfully" />
     <div class="h-screen flex justify-center items-center flex-col">
-        <div class="w-1/2">
+        <div class="md:w-1/2">
             <x-button-back class="w-28" />
             <form action="" id="form">
                 {{-- TITLE BASED ON RECEIVED OR GIVEN --}}
@@ -27,7 +27,7 @@
                         </svg>
                         <input type="date" class="grow" placeholder="Date" name="date" id="dateInput" />
                     </x-label-input>
-                    <x-button type="submit" class="btn btn-primary justify-center">Save</x-button>
+                    <x-button type="submit" class="btn btn-primary lg:justify-center">Save</x-button>
                 </div>
             </form>
         </div>
