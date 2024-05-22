@@ -23,7 +23,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex flex-col md:flex-row gap-4">
                         <x-label-input>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-4 h-4 opacity-70">
@@ -52,7 +52,7 @@
                         </svg>
                         <input type="date" class="grow" placeholder="Date" name="date" id="dateInput" />
                     </x-label-input>
-                    <x-button type="submit" class="btn btn-primary justify-center">Save</x-button>
+                    <x-button type="submit" class="btn btn-primary lg:justify-center">Save</x-button>
                 </div>
             </form>
         </div>
