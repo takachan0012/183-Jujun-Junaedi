@@ -1,7 +1,7 @@
 <x-layout-dashboard>
     <x-slot:content>{{ $content }}</x-slot:content>
     <div class="flex justify-center items-center h-screen">
-        <div class="w-1/2">
+        <div class="md:w-1/2">
             <div class="flex justify-between">
                 <x-button-back class="w-28" />
                 {{-- IF DEBT CONNECTED TO TRANSACTION THIS ACTION HIDDEN --}}
