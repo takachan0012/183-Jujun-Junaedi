@@ -1,9 +1,10 @@
 <x-layout-dashboard>
     <x-slot:content>{{ $content }}</x-slot:content>
+    <x-toastify title="Update Successfully" />
     <div class="h-screen flex justify-center items-center flex-col">
         <div class="w-1/2">
             <x-button-back class="w-28" />
-            <form action="">
+            <form action="" id="form">
                 {{-- TITLE BASED ON RECEIVED OR GIVEN --}}
                 <h2 class="text-2xl text-center my-4">Amount You've Received</h2>
                 <div class="flex flex-col gap-4">

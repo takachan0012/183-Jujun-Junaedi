@@ -81,6 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const formattedDate = `${year}-${month}-${day}`;
     dateInput.value = formattedDate;
 
+    // Add event listener to form submit
+    document.getElementById('form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form from submitting
+        showToast();
+    });
+
 });
 
 function formatCurrencyInput(input) {
@@ -99,6 +105,15 @@ function formatCurrencyInput(input) {
 
 function navigationBack() {
     window.history.back();
+}
+
+function showToast() {
+    const toastContainer = document.getElementById('toast-container');
+    toastContainer.classList.remove('hidden');
+    setTimeout(() => {
+        toastContainer.classList.add('hidden');
+        navigationBack();
+    }, 3000); // Hide toast after 3 seconds
 }
 
 
