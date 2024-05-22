@@ -9,7 +9,7 @@
                     <div class="flex justify-between">
                         <span class="text-green-primary text-xl">Rp10,000</span>
                         <!-- The button to open modal -->
-                        <label for="my_modal_7" class="btn btn-primary w-24 justify-center">Lunaskan</label>
+                        <label for="my_modal_7" class="btn btn-primary w-24 justify-center">Pay Off</label>
 
                         <!-- Put this part before </body> tag -->
                         <input type="checkbox" id="my_modal_7" class="modal-toggle" />
