@@ -1,17 +1,18 @@
 <x-layout-dashboard>
     <x-slot:content>{{ $content }}</x-slot:content>
     <div class="h-screen flex justify-center items-center flex-col">
+        <x-toastify title="Created Successfully" />
         <div>
             <x-button-back />
-            <form action="">
+            <form action="" id="form">
                 <h2 class="text-2xl text-center">Create Debt</h2>
                 <div class="flex flex-col gap-4">
                     <div class="flex gap-3">
                         <div class="form-control p-4">
                             <label class="label cursor-pointer flex gap-2">
                                 <span class="label-text">Give to</span>
-                                <input type="radio" name="transaction" value="give-to" class="radio checked:bg-red-500"
-                                    checked />
+                                <input type="radio" name="transaction" value="give-to"
+                                    class="radio checked:bg-red-500" checked />
                             </label>
                         </div>
                         <div class="form-control p-4">
