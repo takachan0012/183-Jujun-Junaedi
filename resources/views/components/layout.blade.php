@@ -8,7 +8,7 @@
     <title>{{ $title }}</title>
 </head>
 
-<body>
+<body class="md:flex justify-center lg:block">
     {{ $slot }}
 </body>
 

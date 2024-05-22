@@ -1,9 +1,9 @@
 <x-layout>
     <x-slot:title>Dashboard | kunciKas</x-slot:title>
-    <div class="h-screen w-screen flex">
-        <div class="h-screen w-[20%] border-r-2 border-[#ffffff0d] lg:fixed">
-            <div class="h-24">
-                <div class="h-full flex justify-center items-center gap-1">
+    <div class="w-[95%] lg:flex">
+        <div class="z-50 lg:h-screen lg:w-[20%] lg:border-r-2 lg:border-t-0 border-[#ffffff0d] fixed bottom-0">
+            <div class="w-screen bg-base-100 p-2 lg:w-full lg:p-0">
+                <div class="hidden h-full lg:flex justify-center items-center gap-1 mt-4 mb-7">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 text-green-primary">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -13,33 +13,10 @@
                         kunciKas
                     </h1>
                 </div>
-                <div class="w-full my-4">
-                    <ul class="w-full menu lg:menu-horizontal p-0">
-                        <li class="w-full flex justify-center items-center">
-                            <details class="w-[70%]">
-                                <summary class="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                                    </svg>
-                                    <div class="flex flex-col">
-                                        <span class="font-medium">Jujun Junaedi</span>
-                                        <span class="font-light">User</span>
-                                    </div>
-                                </summary>
-                                <ul class="w-[70%] rounded-none">
-                                    <li><a>Profile</a></li>
-                                    <li><a>Logout</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </div>
-                <div class="flex flex-col gap-3">
+                <div class="rounded-md flex justify-around gap-2 lg:relative lg:flex-col">
                     <a href="/dashboard" class="hover:text-green-primary">
                         <x-button
-                            class="{{ request()->is('dashboard') ? 'text-green-primary border-green-primary border-r-2' : '' }}">
+                            class="{{ request()->is('dashboard') ? 'text-green-primary border-green-primary lg:border-r-2 lg:border-t-0' : '' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -52,7 +29,7 @@
                     </a>
                     <a href="/dashboard/debt" class="hover:text-green-primary">
                         <x-button
-                            class="{{ Str::contains(request()->path(), 'debt') ? 'text-green-primary border-green-primary border-r-2' : '' }}">
+                            class="{{ Str::contains(request()->path(), 'debt') ? 'text-green-primary border-green-primary lg:border-r-2 lg:border-t-0' : '' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -65,7 +42,7 @@
                     </a>
                     <a href="/dashboard/transaction" class="hover:text-green-primary">
                         <x-button
-                            class="{{ request()->is('dashboard/transaction') ? 'text-green-primary border-green-primary border-r-2' : '' }}">
+                            class="{{ request()->is('dashboard/transaction') ? 'text-green-primary border-green-primary lg:border-r-2 lg:border-t-0' : '' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -76,11 +53,23 @@
                             </span>
                         </x-button>
                     </a>
+                    <a href="/dashboard/profile" class="hover:text-green-primary">
+                        <x-button
+                            class="{{ request()->is('dashboard/profile') ? 'text-green-primary border-green-primary lg:border-r-2 lg:border-t-0' : '' }}">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                            <span>
+                                Profile
+                            </span>
+                        </x-button>
+                    </a>
                 </div>
-
             </div>
         </div>
-        <div class="h-fit ml-[20%] w-full p-4">
+        <div class="mb-28 lg:h-fit lg:ml-[21%] lg:w-full p-4">
             {{ $content }}
             {{ $slot }}
         </div>
