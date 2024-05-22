@@ -1,22 +1,23 @@
 <x-layout-dashboard>
     <x-slot:content>{{ $content }}</x-slot:content>
-    <div class="z-10 fixed top-0 w-full p-4 bg-base-100 h-28">
+    <div class="z-10 fixed top-0 w-full py-4 bg-base-100 h-28">
         <h2 class="text-2xl">Debt</h2>
     </div>
     <div role="tablist" class="tabs tabs-bordered">
         <input type="radio" name="my_tabs_1" role="tab"
-            class="tab pb-11 hover:cursor-pointer sticky top-16 z-10 bg-base-100 mb-9" aria-label="Overview" checked />
-        <div role="tabpanel" class="tab-content p-10 overflow-x-auto">
-            <div class="flex gap-2 my-4">
+            class="inline-block whitespace-nowrap tab pb-11 pt-7 bg-base-100  hover:cursor-pointer sticky top-16 z-10 mb-9"
+            aria-label="Overview" checked />
+        <div role="tabpanel" class="my-2 tab-content lg:p-10 overflow-x-hidden">
+            <div class="flex flex-col md:flex-row gap-2 my-4">
                 <a href="{{ route('createDebt') }}"
-                    class="w-1/4 h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-green-primary hover:shadow-[inset_1px_1px_10px_#1db753] text-green-primary delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer">
+                    class="w-full lg:w-1/4 h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-green-primary hover:shadow-[inset_1px_1px_10px_#1db753] text-green-primary delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-9 h-9">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
                     <span>Create Debt</span>
                 </a>
-                <div class="w-1/4 h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-red-500 hover:shadow-[inset_1px_1px_10px_rgb(239_68_68)] text-red-500 delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer"
+                <div class="w-full lg:w-1/4 h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-red-500 hover:shadow-[inset_1px_1px_10px_rgb(239_68_68)] text-red-500 delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer"
                     onclick="listCustomerDebt()">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-9 h-9">
@@ -26,7 +27,7 @@
                     <span>Customer Debt Amount</span>
                     <span>20,000</span>
                 </div>
-                <div class="w-1/4 h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-green-primary hover:shadow-[inset_1px_1px_10px_#1db753] text-green-primary delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer"
+                <div class="w-full lg:w-1/4 h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-green-primary hover:shadow-[inset_1px_1px_10px_#1db753] text-green-primary delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer"
                     onclick="listMyDebt()">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-9 h-9">
@@ -48,207 +49,212 @@
                 </x-label-input>
                 <button type="submit" class="btn btn-primary">Search</button>
             </form>
-            <table class="table">
-                <!-- head -->
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Amount</th>
-                        <th>Due Date</th>
-                        <th>Status</th>
-                        <th>Category</th>
-                        <th>Notes</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- row 1 -->
-                    <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Mikasa</div>
+            <div class="overflow-x-auto">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Category</th>
+                            <th>Notes</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- row 1 -->
+                        <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">Mikasa</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-green-primary">10,000</span>
-                            <br />
-                            <span class="text-xs">My Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td><span>Paid Off</span></td>
-                        <td><span>Expense</span></td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr>
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Taka</div>
+                            </td>
+                            <td>
+                                <span class="text-green-primary">10,000</span>
+                                <br />
+                                <span class="text-xs">My Debt</span>
+                            </td>
+                            <td>
+                                <span>2 Juni 2023</span>
+                            </td>
+                            <td><span>Paid Off</span></td>
+                            <td><span>Expense</span></td>
+                            <td>
+                                <span class="line-clamp-2">For living
+                                </span>
+                            </td>
+                            <th>
+                                <button class="btn btn-ghost btn-xs">details</button>
+                            </th>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">Taka</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-red-500">10,000</span>
-                            <br />
-                            <span class="text-xs">Customer Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td><span>Paid Off</span></td>
-                        <td><span>Expense</span></td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    <!-- row 3 -->
-                    <tr>
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Eren Yeager</div>
+                            </td>
+                            <td>
+                                <span class="text-red-500">10,000</span>
+                                <br />
+                                <span class="text-xs">Customer Debt</span>
+                            </td>
+                            <td>
+                                <span>2 Juni 2023</span>
+                            </td>
+                            <td><span>Paid Off</span></td>
+                            <td><span>Expense</span></td>
+                            <td>
+                                <span class="line-clamp-2">For living
+                                </span>
+                            </td>
+                            <th>
+                                <button class="btn btn-ghost btn-xs">details</button>
+                            </th>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">Eren Yeager</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-green-primary">30,000</span>
-                            <br />
-                            <span class="text-xs">My Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td><span>Debt</span></td>
-                        <td><span>Income</span></td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                </tbody>
-                <!-- foot -->
-            </table>
+                            </td>
+                            <td>
+                                <span class="text-green-primary">30,000</span>
+                                <br />
+                                <span class="text-xs">My Debt</span>
+                            </td>
+                            <td>
+                                <span>2 Juni 2023</span>
+                            </td>
+                            <td><span>Debt</span></td>
+                            <td><span>Income</span></td>
+                            <td>
+                                <span class="line-clamp-2">For living
+                                </span>
+                            </td>
+                            <th>
+                                <button class="btn btn-ghost btn-xs">details</button>
+                            </th>
+                        </tr>
+                    </tbody>
+                    <!-- foot -->
+                </table>
+            </div>
         </div>
 
         <input type="radio" name="my_tabs_1" role="tab"
-            class="tab pb-11 hover:cursor-pointer sticky top-16 z-10 bg-base-100 mb-9" aria-label="My Debt" />
-        <div role="tabpanel" class="tab-content p-10 overflow-x-auto">
-            <table class="table">
-                <!-- head -->
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Amount</th>
-                        <th>Due Date</th>
-                        <th>Status</th>
-                        <th>Category</th>
-                        <th>Notes</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- row 1 -->
-                    <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Mikasa</div>
+            class="inline-block whitespace-nowrap tab pb-11 pt-7 bg-base-100  hover:cursor-pointer sticky top-16 z-10 mb-9"
+            aria-label="My Debt" />
+        <div role="tabpanel" class="tab-content lg:p-10 overflow-x-hidden">
+            <div class="overflow-x-auto my-4">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Category</th>
+                            <th>Notes</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- row 1 -->
+                        <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">Mikasa</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-green-primary">10,000</span>
-                            <br />
-                            <span class="text-xs">My Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td><span>Paid Off</span></td>
-                        <td><span>Expense</span></td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Tachibana</div>
+                            </td>
+                            <td>
+                                <span class="text-green-primary">10,000</span>
+                                <br />
+                                <span class="text-xs">My Debt</span>
+                            </td>
+                            <td>
+                                <span>2 Juni 2023</span>
+                            </td>
+                            <td><span>Paid Off</span></td>
+                            <td><span>Expense</span></td>
+                            <td>
+                                <span class="line-clamp-2">For living
+                                </span>
+                            </td>
+                            <th>
+                                <button class="btn btn-ghost btn-xs">details</button>
+                            </th>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">Tachibana</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-green-primary">10,000</span>
-                            <br />
-                            <span class="text-xs">My Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td><span>Paid Off</span></td>
-                        <td><span>Expense</span></td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    <!-- row 3 -->
-                    <tr>
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Eren Yeager</div>
+                            </td>
+                            <td>
+                                <span class="text-green-primary">10,000</span>
+                                <br />
+                                <span class="text-xs">My Debt</span>
+                            </td>
+                            <td>
+                                <span>2 Juni 2023</span>
+                            </td>
+                            <td><span>Paid Off</span></td>
+                            <td><span>Expense</span></td>
+                            <td>
+                                <span class="line-clamp-2">For living
+                                </span>
+                            </td>
+                            <th>
+                                <button class="btn btn-ghost btn-xs">details</button>
+                            </th>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">Eren Yeager</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-green-primary">30,000</span>
-                            <br />
-                            <span class="text-xs">My Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td><span>Debt</span></td>
-                        <td><span>Income</span></td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                </tbody>
-                <!-- foot -->
-            </table>
+                            </td>
+                            <td>
+                                <span class="text-green-primary">30,000</span>
+                                <br />
+                                <span class="text-xs">My Debt</span>
+                            </td>
+                            <td>
+                                <span>2 Juni 2023</span>
+                            </td>
+                            <td><span>Debt</span></td>
+                            <td><span>Income</span></td>
+                            <td>
+                                <span class="line-clamp-2">For living
+                                </span>
+                            </td>
+                            <th>
+                                <button class="btn btn-ghost btn-xs">details</button>
+                            </th>
+                        </tr>
+                    </tbody>
+                    <!-- foot -->
+                </table>
+            </div>
             <div class="join">
                 <button class="join-item btn">«</button>
                 <button class="join-item btn">Page 1</button>
@@ -257,106 +263,109 @@
         </div>
 
         <input type="radio" name="my_tabs_1" role="tab"
-            class="tab pb-11 hover:cursor-pointer sticky top-16 z-10 bg-base-100 mb-9" aria-label="Customer Debt" />
-        <div role="tabpanel" class="tab-content p-10 overflow-x-auto">
-            <table class="table">
-                <!-- head -->
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Amount</th>
-                        <th>Due Date</th>
-                        <th>Status</th>
-                        <th>Category</th>
-                        <th>Notes</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- row 1 -->
-                    <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Mikasa</div>
+            class="inline-block whitespace-nowrap tab pb-11 pt-7 bg-base-100  hover:cursor-pointer sticky top-16 z-10 mb-9"
+            aria-label="Customer Debt" />
+        <div role="tabpanel" class="tab-content lg:p-10 overflow-x-hidden">
+            <div class="overflow-x-auto my-4">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Category</th>
+                            <th>Notes</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- row 1 -->
+                        <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">Mikasa</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-red-500">10,000</span>
-                            <br />
-                            <span class="text-xs">Customer Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td><span>Paid Off</span></td>
-                        <td><span>Expense</span></td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Tachibana</div>
+                            </td>
+                            <td>
+                                <span class="text-red-500">10,000</span>
+                                <br />
+                                <span class="text-xs">Customer Debt</span>
+                            </td>
+                            <td>
+                                <span>2 Juni 2023</span>
+                            </td>
+                            <td><span>Paid Off</span></td>
+                            <td><span>Expense</span></td>
+                            <td>
+                                <span class="line-clamp-2">For living
+                                </span>
+                            </td>
+                            <th>
+                                <button class="btn btn-ghost btn-xs">details</button>
+                            </th>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">Tachibana</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-red-500">10,000</span>
-                            <br />
-                            <span class="text-xs">Customer Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td><span>Paid Off</span></td>
-                        <td><span>Expense</span></td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    <!-- row 3 -->
-                    <tr>
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Eren Yeager</div>
+                            </td>
+                            <td>
+                                <span class="text-red-500">10,000</span>
+                                <br />
+                                <span class="text-xs">Customer Debt</span>
+                            </td>
+                            <td>
+                                <span>2 Juni 2023</span>
+                            </td>
+                            <td><span>Paid Off</span></td>
+                            <td><span>Expense</span></td>
+                            <td>
+                                <span class="line-clamp-2">For living
+                                </span>
+                            </td>
+                            <th>
+                                <button class="btn btn-ghost btn-xs">details</button>
+                            </th>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">Eren Yeager</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-red-500">10,000</span>
-                            <br />
-                            <span class="text-xs">Customer Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td><span>Debt</span></td>
-                        <td><span>Income</span></td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                </tbody>
-                <!-- foot -->
-            </table>
+                            </td>
+                            <td>
+                                <span class="text-red-500">10,000</span>
+                                <br />
+                                <span class="text-xs">Customer Debt</span>
+                            </td>
+                            <td>
+                                <span>2 Juni 2023</span>
+                            </td>
+                            <td><span>Debt</span></td>
+                            <td><span>Income</span></td>
+                            <td>
+                                <span class="line-clamp-2">For living
+                                </span>
+                            </td>
+                            <th>
+                                <button class="btn btn-ghost btn-xs">details</button>
+                            </th>
+                        </tr>
+                    </tbody>
+                    <!-- foot -->
+                </table>
+            </div>
             <div class="join">
                 <button class="join-item btn">«</button>
                 <button class="join-item btn">Page 1</button>
