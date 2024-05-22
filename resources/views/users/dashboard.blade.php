@@ -70,84 +70,9 @@
                             <span class="line-clamp-2">For living
                             </span>
                         </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr>
                         <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Taka</div>
-                                </div>
-                            </div>
+                            <a href="{{ route('userDebtDetail') }}" class="btn btn-ghost btn-xs">detailsTest</a>
                         </td>
-                        <td>
-                            <span class="text-red-500">10,000</span>
-                            <br />
-                            <span class="text-xs">Customer Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    <!-- row 3 -->
-                    <tr>
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Eren Yeager</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-green-primary">30,000</span>
-                            <br />
-                            <span class="text-xs">My Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
-                    </tr>
-                    <!-- row 4 -->
-                    <tr>
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Sun Jing Woo</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-green-primary">10,000</span>
-                            <br />
-                            <span class="text-xs">My Debt</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td>
-                            <span class="line-clamp-2">For living
-                            </span>
-                        </td>
-                        <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
-                        </th>
                     </tr>
                 </tbody>
                 <!-- foot -->
@@ -192,7 +117,7 @@
                             </span>
                         </td>
                         <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
+                            <a href="{{ route('userDebt') }}" class="btn btn-ghost btn-xs">details</a>
                         </th>
                     </tr>
                     <!-- row 2 -->
@@ -215,7 +140,7 @@
                             </span>
                         </td>
                         <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
+                            <a href="{{ route('userDebt') }}" class="btn btn-ghost btn-xs">details</a>
                         </th>
                     </tr>
                     <!-- row 3 -->
@@ -238,7 +163,7 @@
                             </span>
                         </td>
                         <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
+                            <a href="{{ route('userDebt') }}" class="btn btn-ghost btn-xs">details</a>
                         </th>
                     </tr>
                     <!-- row 4 -->
@@ -261,7 +186,7 @@
                             </span>
                         </td>
                         <th>
-                            <button class="btn btn-ghost btn-xs">details</button>
+                            <a href="{{ route('userDebt') }}" class="btn btn-ghost btn-xs">details</a>
                         </th>
                     </tr>
                 </tbody>
