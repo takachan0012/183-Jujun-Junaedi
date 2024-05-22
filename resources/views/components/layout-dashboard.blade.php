@@ -1,8 +1,8 @@
 <x-layout>
     <x-slot:title>Dashboard | kunciKas</x-slot:title>
-    <div class="w-[95%] lg:flex">
+    <div class="md:w-[95%] lg:flex">
         <div class="z-50 lg:h-screen lg:w-[20%] lg:border-r-2 lg:border-t-0 border-[#ffffff0d] fixed bottom-0">
-            <div class="w-screen bg-base-100 p-2 lg:w-full lg:p-0">
+            <div class="w-screen bg-base-100 lg:w-full lg:p-0">
                 <div class="hidden h-full lg:flex justify-center items-center gap-1 mt-4 mb-7">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 text-green-primary">
