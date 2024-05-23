@@ -41,16 +41,21 @@
                 <!-- head -->
                 <thead>
                     <tr>
-                        <th>Name</th>
                         <th>Amount</th>
-                        <th>Due Date</th>
-                        <th>Notes</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- row 1 -->
                     <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
+                        <td>
+                            <span class="text-green-primary">10,000</span>
+                            <br />
+                            <span class="text-xs">My Debt</span>
+                        </td>
                         <td>
                             <div class="flex items-center gap-3">
                                 <div>
@@ -59,15 +64,10 @@
                             </div>
                         </td>
                         <td>
-                            <span class="text-green-primary">10,000</span>
-                            <br />
-                            <span class="text-xs">My Debt</span>
-                        </td>
-                        <td>
                             <span>2 Juni 2023</span>
                         </td>
                         <td>
-                            <span class="line-clamp-2">For living
+                            <span class="line-clamp-2">Paid Off
                             </span>
                         </td>
                         <td>
@@ -89,105 +89,33 @@
                 <!-- head -->
                 <thead>
                     <tr>
-                        <th>Notes</th>
                         <th>Amount</th>
-                        <th>Category</th>
+                        <th>Date</th>
                         <th>Status</th>
+                        <th>Category</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- row 1 -->
-                    <tr>
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Salary</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-green-primary">10,000</span>
-                        </td>
-                        <td>
-                            <span>Income</span>
-                        </td>
-                        <td>
-                            <span class="line-clamp-2">Paid Off
-                            </span>
-                        </td>
-                        <th>
-                            <a href="{{ route('userDebt') }}" class="btn btn-ghost btn-xs">details</a>
-                        </th>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr>
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Buy Coffee</div>
-                                </div>
-                            </div>
-                        </td>
+                    <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
                         <td>
                             <span class="text-red-500">10,000</span>
                         </td>
                         <td>
-                            <span>Expense</span>
+                            <span>2 Juni 2023</span>
                         </td>
                         <td>
                             <span class="line-clamp-2">Paid Off
                             </span>
                         </td>
-                        <th>
-                            <a href="{{ route('userDebt') }}" class="btn btn-ghost btn-xs">details</a>
-                        </th>
-                    </tr>
-                    <!-- row 3 -->
-                    <tr>
                         <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Packet Data</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="text-red-500">30,000</span>
-                        </td>
-                        <td>
-                            <span>Expense</span>
-                        </td>
-                        <td>
-                            <span class="line-clamp-2">Debt
+                            <span class="line-clamp-2">Expense
                             </span>
                         </td>
-                        <th>
-                            <a href="{{ route('userDebt') }}" class="btn btn-ghost btn-xs">details</a>
-                        </th>
-                    </tr>
-                    <!-- row 4 -->
-                    <tr>
                         <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Invest</div>
-                                </div>
-                            </div>
+                            <a href="{{ route('userDebtDetail') }}" class="btn btn-ghost btn-xs">detailsTest</a>
                         </td>
-                        <td>
-                            <span class="text-green-primary">10,000</span>
-                        </td>
-                        <td>
-                            <span>Income</span>
-                        </td>
-                        <td>
-                            <span class="line-clamp-2">Debt
-                            </span>
-                        </td>
-                        <th>
-                            <a href="{{ route('userDebt') }}" class="btn btn-ghost btn-xs">details</a>
-                        </th>
                     </tr>
                 </tbody>
                 <!-- foot -->

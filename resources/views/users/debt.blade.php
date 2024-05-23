@@ -54,8 +54,9 @@
                     <!-- head -->
                     <thead>
                         <tr>
-                            <th>Name</th>
                             <th>Amount</th>
+                            <th>Name</th>
+                            <th>Date</th>
                             <th>Due Date</th>
                             <th>Status</th>
                             <th>Category</th>
@@ -67,19 +68,18 @@
                         <!-- row 1 -->
                         <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
                             <td>
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <div class="font-bold">Mikasa</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
                                 <span class="text-green-primary">10,000</span>
                                 <br />
                                 <span class="text-xs">My Debt</span>
                             </td>
                             <td>
+                                <span class="font-bold">Mikasa</span>
+                            </td>
+                            <td>
                                 <span>2 Juni 2023</span>
+                            </td>
+                            <td>
+                                <span>10 Juni 2023</span>
                             </td>
                             <td><span>Paid Off</span></td>
                             <td><span>Expense</span></td>
@@ -91,52 +91,23 @@
                                 <button class="btn btn-ghost btn-xs">details</button>
                             </th>
                         </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <div class="font-bold">Taka</div>
-                                    </div>
-                                </div>
-                            </td>
+                        <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
                             <td>
                                 <span class="text-red-500">10,000</span>
                                 <br />
                                 <span class="text-xs">Customer Debt</span>
                             </td>
                             <td>
-                                <span>2 Juni 2023</span>
-                            </td>
-                            <td><span>Paid Off</span></td>
-                            <td><span>Expense</span></td>
-                            <td>
-                                <span class="line-clamp-2">For living
-                                </span>
-                            </td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <div class="font-bold">Eren Yeager</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="text-green-primary">30,000</span>
-                                <br />
-                                <span class="text-xs">My Debt</span>
+                                <span class="font-bold">Mikasa</span>
                             </td>
                             <td>
                                 <span>2 Juni 2023</span>
+                            </td>
+                            <td>
+                                <span>10 Juni 2023</span>
                             </td>
                             <td><span>Debt</span></td>
-                            <td><span>Income</span></td>
+                            <td><span>Expense</span></td>
                             <td>
                                 <span class="line-clamp-2">For living
                                 </span>
@@ -160,8 +131,9 @@
                     <!-- head -->
                     <thead>
                         <tr>
-                            <th>Name</th>
                             <th>Amount</th>
+                            <th>Name</th>
+                            <th>Date</th>
                             <th>Due Date</th>
                             <th>Status</th>
                             <th>Category</th>
@@ -173,19 +145,18 @@
                         <!-- row 1 -->
                         <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
                             <td>
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <div class="font-bold">Mikasa</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
                                 <span class="text-green-primary">10,000</span>
                                 <br />
                                 <span class="text-xs">My Debt</span>
                             </td>
                             <td>
+                                <span class="font-bold">Mikasa</span>
+                            </td>
+                            <td>
                                 <span>2 Juni 2023</span>
+                            </td>
+                            <td>
+                                <span>10 Juni 2023</span>
                             </td>
                             <td><span>Paid Off</span></td>
                             <td><span>Expense</span></td>
@@ -198,59 +169,6 @@
                             </th>
                         </tr>
                         <!-- row 2 -->
-                        <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <div class="font-bold">Tachibana</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="text-green-primary">10,000</span>
-                                <br />
-                                <span class="text-xs">My Debt</span>
-                            </td>
-                            <td>
-                                <span>2 Juni 2023</span>
-                            </td>
-                            <td><span>Paid Off</span></td>
-                            <td><span>Expense</span></td>
-                            <td>
-                                <span class="line-clamp-2">For living
-                                </span>
-                            </td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <div class="font-bold">Eren Yeager</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="text-green-primary">30,000</span>
-                                <br />
-                                <span class="text-xs">My Debt</span>
-                            </td>
-                            <td>
-                                <span>2 Juni 2023</span>
-                            </td>
-                            <td><span>Debt</span></td>
-                            <td><span>Income</span></td>
-                            <td>
-                                <span class="line-clamp-2">For living
-                                </span>
-                            </td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
                     </tbody>
                     <!-- foot -->
                 </table>
@@ -271,8 +189,9 @@
                     <!-- head -->
                     <thead>
                         <tr>
-                            <th>Name</th>
                             <th>Amount</th>
+                            <th>Name</th>
+                            <th>Date</th>
                             <th>Due Date</th>
                             <th>Status</th>
                             <th>Category</th>
@@ -284,76 +203,21 @@
                         <!-- row 1 -->
                         <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
                             <td>
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <div class="font-bold">Mikasa</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
                                 <span class="text-red-500">10,000</span>
                                 <br />
                                 <span class="text-xs">Customer Debt</span>
                             </td>
                             <td>
-                                <span>2 Juni 2023</span>
-                            </td>
-                            <td><span>Paid Off</span></td>
-                            <td><span>Expense</span></td>
-                            <td>
-                                <span class="line-clamp-2">For living
-                                </span>
-                            </td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr data-href="{{ route('debt') }}" class="hover:cursor-pointer">
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <div class="font-bold">Tachibana</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="text-red-500">10,000</span>
-                                <br />
-                                <span class="text-xs">Customer Debt</span>
+                                <span class="font-bold">Mikasa</span>
                             </td>
                             <td>
                                 <span>2 Juni 2023</span>
                             </td>
-                            <td><span>Paid Off</span></td>
-                            <td><span>Expense</span></td>
                             <td>
-                                <span class="line-clamp-2">For living
-                                </span>
-                            </td>
-                            <th>
-                                <button class="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <td>
-                                <div class="flex items-center gap-3">
-                                    <div>
-                                        <div class="font-bold">Eren Yeager</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="text-red-500">10,000</span>
-                                <br />
-                                <span class="text-xs">Customer Debt</span>
-                            </td>
-                            <td>
-                                <span>2 Juni 2023</span>
+                                <span>10 Juni 2023</span>
                             </td>
                             <td><span>Debt</span></td>
-                            <td><span>Income</span></td>
+                            <td><span>Expense</span></td>
                             <td>
                                 <span class="line-clamp-2">For living
                                 </span>
