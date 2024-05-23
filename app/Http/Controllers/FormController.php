@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Auth\Events\Validated;
+use App\Models\User;
+
 use Illuminate\Http\Request;
 
 class FormController extends Controller
@@ -11,21 +12,31 @@ class FormController extends Controller
     {
         // Validate the request data
         $validatedData = $request->validate([
-            'username' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:users,email',
             'password' => 'required|string|min:8',
         ]);
 
         // Retrieve the username from the request
-        $username = $request->input('username');
-        $email = $request->input('email');
-        $password = $request->input('password');
+        $name = $validatedData['name'];
+        $email = $validatedData['email'];
+        $password = $validatedData['password'];
 
-        // Process the submitted data
-        // You can save it to the database, perform additional actions, etc.
+        //hashed password
+        $hashedPassword = bcrypt($password);
+        // Assign a default role ID (assuming 'user' role has an ID of 2)
+        $defaultRoleId = 2;
+
+        User::create([
+            'name' => $name,
+            'email' => $email,
+            'password' => $hashedPassword,
+            'role_id' => $defaultRoleId,
+        ]);
+
 
         // Return a response
-        return "<h1>Register Successfully</h1><h3>Email => $email</h3><h3>Username => $username</h3><h3>Password => $password</h3>";
+        return redirect()->route('dashboard');
     }
     public function login(Request $request)
     {
