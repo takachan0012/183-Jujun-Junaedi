@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Support\Facades\DB;
+
+
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +15,44 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        DB::table('roles')->insert([
+            [
+                'id' => 1,
+                'name' => 'admin',
+            ],
+            [
+                'id' => 2,
+                'name' => 'user',
+            ]
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        DB::table('status_transaction')->insert([
+            [
+                'id' => 1,
+                'name' => 'paid off',
+            ],
+            [
+                'id' => 2,
+                'name' => 'debt',
+            ]
+        ]);
+
+        DB::table('category_transaction')->insert([
+            [
+                'id' => 1,
+                'name' => 'expense',
+            ],
+            [
+                'id' => 2,
+                'name' => 'income',
+            ]
+        ]);
+
+        User::create([
+            'name' => 'taka',
+            'email' => 'test@gmail.com',
+            'password' => bcrypt('admin123'),
+            'role_id' => 1,
         ]);
     }
 }
