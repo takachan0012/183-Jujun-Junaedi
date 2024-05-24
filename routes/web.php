@@ -13,14 +13,14 @@ Route::get('/', function () {
     return view('welcome', ['title' => 'Welcome || kunciKas']);
 });
 
-Route::post('register-successfully', [FormController::class, 'register'])->name('register-successfully');
-Route::post('login-successfully', [FormController::class, 'login'])->name('login-successfully');
-
 Route::controller(Auth::class)->group(function () {
-    Route::get('/login', 'login')->name('login');
-    Route::get('/register', 'register')->name('register');
-    Route::get('/reset-password', 'resetPassword')->name('resetPassword');
-    Route::get('/update-password', 'updatePassword')->name('updatePassword');
+    Route::get('/login', 'loginPage')->name('loginPage');
+    Route::get('/register', 'registerPage')->name('registerPage');
+    Route::get('/reset-password', 'resetPasswordPage')->name('resetPasswordPage');
+    Route::get('/update-password', 'updatePasswordPage')->name('updatePasswordPage');
+
+    Route::post('/login', 'login')->name('login');
+    Route::post('/register', 'register')->name('register');
 });
 
 Route::prefix('dashboard')->controller(UserController::class)->group(function () {

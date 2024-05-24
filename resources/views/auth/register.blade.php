@@ -14,7 +14,7 @@
                     </h1>
                 </div>
             </a>
-            <form action="{{ route('register-successfully') }}" method="post" class="w-full flex flex-col gap-3">
+            <form action="{{ route('register') }}" method="post" class="w-full flex flex-col gap-3">
                 @csrf
                 <x-label-input>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
@@ -43,7 +43,8 @@
                 @enderror
                 <button type="submit" class="btn btn-primary">Register</button>
                 <div>
-                    <span>Have an account? </span><a href={{ route('login') }} class="underline hover:no-underline">Log
+                    <span>Have an account? </span><a href={{ route('loginPage') }}
+                        class="underline hover:no-underline">Log
                         In</a>
                 </div>
             </form>

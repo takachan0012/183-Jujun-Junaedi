@@ -14,7 +14,7 @@
                     </h1>
                 </div>
             </a>
-            <form action="{{ route('login-successfully') }}" method="post" class="w-full flex flex-col gap-3">
+            <form action="{{ route('login') }}" method="post" class="w-full flex flex-col gap-3">
                 @csrf
                 <x-label-input>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
@@ -28,9 +28,10 @@
                 </x-label-input>
                 <x-password-input />
                 <button type="submit" class="btn btn-primary">Log In</button>
-                <a href="/reset-password" class="w-fit text-green-primary hover:underline">Forget Password</a>
+                <a href="{{ route('resetPasswordPage') }}" class="w-fit text-green-primary hover:underline">Forget
+                    Password</a>
                 <div>
-                    <span>Have not account yet? </span><a href={{ route('register') }}
+                    <span>Have not account yet? </span><a href={{ route('registerPage') }}
                         class="underline hover:no-underline">Register</a>
                 </div>
                 @if ($errors->any())

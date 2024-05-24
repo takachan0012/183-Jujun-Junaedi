@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <a href={{ route('register') }}>
+                <a href={{ route('registerPage') }}>
                     <x-button class="btn md:w-full w-24 btn-primary justify-center">
                         <span class="hidden md:block">Launch the App</span>
                         <span class="md:hidden">Launch</span>
