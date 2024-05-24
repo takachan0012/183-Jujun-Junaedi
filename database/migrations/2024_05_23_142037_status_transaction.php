@@ -18,17 +18,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
         });
-
-        DB::table('status_transaction')->insert([
-            [
-                'id' => 1,
-                'name' => 'paid off',
-            ],
-            [
-                'id' => 2,
-                'name' => 'debt',
-            ]
-        ]);
     }
 
     /**
