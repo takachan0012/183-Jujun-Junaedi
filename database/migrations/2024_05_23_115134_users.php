@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id('user_id'); // Primary key
+            // Using a UUID as the primary key
+            $table->uuid('user_id')->primary();
             $table->foreignId('role_id')->constrained('roles'); // Foreign key to roles table
             $table->string('name');
             $table->string('email')->unique();
