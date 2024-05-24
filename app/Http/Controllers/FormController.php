@@ -33,8 +33,6 @@ class FormController extends Controller
             'password' => $hashedPassword,
             'role_id' => $defaultRoleId,
         ]);
-
-
         // Return a response
         return redirect()->route('dashboard');
     }
