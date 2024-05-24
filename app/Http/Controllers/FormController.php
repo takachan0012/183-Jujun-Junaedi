@@ -38,21 +38,24 @@ class FormController extends Controller
     }
     public function login(Request $request)
     {
-        // $validatedData = $request->validate([
-        //     'email' => 'required|email|max:255',
-        //     'password' => 'required|string|min:8',
-        // ]);
-        // Retrieve the username from the request
-        $email = $request->input('email');
-        $password = $request->input('password');
-        if (strlen($password) < 8) {
-            return "your password incorrect";
+        $validatedData = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string',
+        ]);
+
+        $email = $validatedData['email'];
+        $password = $validatedData['password'];
+
+        $user = User::where('email', $email)->first();
+
+        if ($user && password_verify($password, $user->password)) {
+            // Authentication successful, redirect to the dashboard
+            return redirect()->route('dashboard');
+        } else {
+            // Authentication failed, redirect to the login page
+            return redirect()->route('login')->withErrors([
+                'email' => 'Invalid email or password',
+            ]);
         }
-
-        // Process the submitted data
-        // You can save it to the database, perform additional actions, etc.
-
-        // Return a response
-        return "<h1>Login Successfully</h1><h3>Email => $email</h3><h3>Password => $password</h3>";
     }
 }

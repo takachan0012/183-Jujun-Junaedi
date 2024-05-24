@@ -33,6 +33,15 @@
                     <span>Have not account yet? </span><a href={{ route('register') }}
                         class="underline hover:no-underline">Register</a>
                 </div>
+                @if ($errors->any())
+                    <div>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li class="text-red-500">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </form>
         </div>
     </div>
