@@ -14,6 +14,11 @@
                     </h1>
                 </div>
             </a>
+            <div class="text-md text-green-primary my-2 text-center">
+                @if (session('message'))
+                    {{ session('message') }}
+                @endif
+            </div>
             <form action="{{ route('login') }}" method="post" class="w-full flex flex-col gap-3">
                 @csrf
                 <x-label-input>

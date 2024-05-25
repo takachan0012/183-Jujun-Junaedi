@@ -52,7 +52,9 @@ class Auth extends Controller
             'role_id' => $defaultRoleId,
         ]);
         // Return a response
-        return redirect()->route('dashboard');
+        return redirect()->route('loginPage')->with([
+            'message' => 'Registered successfully, Please Log In'
+        ]);
     }
 
     public function login(Request $request)
@@ -78,7 +80,7 @@ class Auth extends Controller
         } else {
             // Authentication failed, redirect to the login page
             return redirect()->route('login')->withErrors([
-                'email' => 'Invalid email or password',
+                'Invalid email or password'
             ]);
         }
     }
