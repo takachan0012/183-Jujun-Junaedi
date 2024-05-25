@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class Auth extends Controller
 {
@@ -66,7 +67,7 @@ class Auth extends Controller
 
         $user = User::where('email', $email)->first();
 
-        if ($user && password_verify($password, $user->password)) {
+        if ($user && Hash::check($request->password, $user->password)) {
             // Authentication successful, redirect to the dashboard
             return redirect()->route('dashboard');
         } else {
