@@ -35,18 +35,21 @@
                     <input type="text" class="grow" placeholder="Email" name="email" required />
                 </x-label-input>
                 <x-password-input />
-                @error('password')
-                    <span class="text-red-500">Password must be more than 8 characters</span>
-                @enderror
-                @error('email')
-                    <span class="text-red-500">Email already exist</span>
-                @enderror
                 <button type="submit" class="btn btn-primary">Register</button>
                 <div>
                     <span>Have an account? </span><a href={{ route('loginPage') }}
                         class="underline hover:no-underline">Log
                         In</a>
                 </div>
+                @if ($errors->any())
+                    <div>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li class="text-red-500">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </form>
         </div>
     </div>
