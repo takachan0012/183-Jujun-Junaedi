@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\Authentication;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,6 +15,15 @@ Route::get('/', function () {
 
 Route::get('/getsession', function () {
     return session()->all();
+});
+
+//logout
+Route::get('/deletesession', function () {
+    session()->forget('isLogged');
+    session()->forget('user_id');
+    session()->forget('name');
+    session()->forget('email');
+    return redirect()->route('loginPage');
 });
 
 Route::controller(Auth::class)->group(function () {
@@ -26,7 +36,7 @@ Route::controller(Auth::class)->group(function () {
     Route::post('/register', 'register')->name('register');
 });
 
-Route::prefix('dashboard')->controller(UserController::class)->group(function () {
+Route::prefix('dashboard')->controller(UserController::class)->middleware(Authentication::class)->group(function () {
     Route::get('/', 'dashboard')->name('dashboard');
     Route::get('/debt', 'debt')->name('debt');
     Route::get('/debt/create', 'createDebt')->name('createDebt');
