@@ -18,33 +18,33 @@ class DatabaseSeeder extends Seeder
         DB::table('roles')->insert([
             [
                 'id' => 1,
-                'name' => 'admin',
+                'name' => 'Admin',
             ],
             [
                 'id' => 2,
-                'name' => 'user',
+                'name' => 'User',
             ]
         ]);
 
         DB::table('status_transaction')->insert([
             [
                 'id' => 1,
-                'name' => 'paid off',
+                'name' => 'Paid Off',
             ],
             [
                 'id' => 2,
-                'name' => 'debt',
+                'name' => 'Debt',
             ]
         ]);
 
         DB::table('category_transaction')->insert([
             [
                 'id' => 1,
-                'name' => 'expense',
+                'name' => 'Expense',
             ],
             [
                 'id' => 2,
-                'name' => 'income',
+                'name' => 'Income',
             ]
         ]);
 
