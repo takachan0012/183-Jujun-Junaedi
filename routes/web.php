@@ -5,12 +5,15 @@ namespace App\Http\Controllers;
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Auth;
-use App\Http\Controllers\FormController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome', ['title' => 'Welcome || kunciKas']);
+});
+
+Route::get('/getsession', function () {
+    return session()->all();
 });
 
 Route::controller(Auth::class)->group(function () {

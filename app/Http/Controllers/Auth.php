@@ -63,11 +63,16 @@ class Auth extends Controller
         ]);
 
         $email = $validatedData['email'];
-        $password = $validatedData['password'];
-
         $user = User::where('email', $email)->first();
 
         if ($user && Hash::check($request->password, $user->password)) {
+            //generate session
+            $request->session()->regenerate();
+            $request->session()->put('isLogged', true);
+            $request->session()->put('user_id', $user->user_id);
+            $request->session()->put('name', $user->name);
+            $request->session()->put('email', $user->email);
+
             // Authentication successful, redirect to the dashboard
             return redirect()->route('dashboard');
         } else {
