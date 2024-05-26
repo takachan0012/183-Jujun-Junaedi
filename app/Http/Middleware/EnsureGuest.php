@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class Authentication
+class EnsureGuest
 {
     /**
      * Handle an incoming request.
@@ -15,8 +15,8 @@ class Authentication
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (session()->get('isLogged') == null && session()->get('user_id') == null) {
-            return redirect()->route('loginPage');
+        if (session()->get('isLogged') != null && session()->get('user_id') != null) {
+            return redirect()->route('dashboard');
         }
         return $next($request);
     }
