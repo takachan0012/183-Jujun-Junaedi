@@ -4,7 +4,8 @@
         <x-toastify title="Created Successfully" />
         <div>
             <x-button-back />
-            <form action="" id="form">
+            <form action="{{ route('createDebtPost') }}" id="form" method="post">
+                @csrf
                 <h2 class="text-2xl text-center">Create Debt</h2>
                 <div class="flex flex-col gap-4">
                     <div class="flex gap-3">
@@ -52,7 +53,7 @@
                         </svg>
                         <input type="date" class="grow" placeholder="Date" name="date" id="dateInput" />
                     </x-label-input>
-                    <x-button type="submit" class="btn btn-primary lg:justify-center">Save</x-button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </form>
         </div>

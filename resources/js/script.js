@@ -82,10 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
     dateInput.value = formattedDate;
 
     // Add event listener to form submit
-    document.getElementById('form').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form from submitting
-        showToast();
-    });
+    // document.getElementById('form').addEventListener('submit', function (event) {
+    //     event.preventDefault(); // Prevent form from submitting
+    //     showToast();
+    // });
 
 });
 

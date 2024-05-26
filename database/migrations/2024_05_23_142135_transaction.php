@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::create('transaction', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->uuid('user_id');
             $table->foreignId('status_id')->constrained('status_transaction');
             $table->foreignId('customer_id')->constrained('customer_transaction');
             $table->foreignId('category_id')->constrained('category_transaction');
-            $table->float('amount', 1);
+            $table->decimal('amount', 15, 0);
             $table->timestamps();
             $table->text('note');
 

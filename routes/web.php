@@ -45,4 +45,7 @@ Route::prefix('dashboard')->controller(UserController::class)->middleware(Ensure
     Route::get('/debt/user/detail', 'userDebtDetail')->name('userDebtDetail'); //using ID for prod ex: /debt/{id}/{debt/tx Id}
     Route::get('/debt/user/detail/update', 'updateDebtDetail')->name('updateDebtDetail'); //using ID for prod ex: /debt/{id}/{debt/tx Id}
     Route::get('/transaction', 'transaction')->name('transaction');
+
+
+    Route::post('/debt/create', 'createDebtPost')->name('createDebtPost');
 });
