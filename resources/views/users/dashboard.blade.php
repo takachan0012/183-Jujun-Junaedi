@@ -1,7 +1,7 @@
 <x-layout-dashboard>
     <x-slot:content>{{ $content }}</x-slot:content>
     <div class="z-10 fixed top-0 w-full py-4 bg-base-100 h-16">
-        <h2 class="text-2xl">Hello, Jujun Junaedi</h2>
+        <h2 class="text-2xl">Hello, {{ session()->get('name') }}</h2>
     </div>
     <section class="mt-16 flex flex-col gap-2 md:flex-row md:justify-around my-4">
         <a href="{{ route('debt') }}" class="w-full md:w-1/2">
