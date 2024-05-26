@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             // Using a UUID as the primary key
-            $table->uuid('user_id')->primary();
+            $table->uuid('id')->primary();
             $table->foreignId('role_id')->constrained('roles'); // Foreign key to roles table
             $table->string('name');
             $table->string('email')->unique();
