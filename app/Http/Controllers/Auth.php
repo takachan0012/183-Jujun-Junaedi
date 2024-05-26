@@ -71,7 +71,7 @@ class Auth extends Controller
             //generate session
             $request->session()->regenerate();
             $request->session()->put('isLogged', true);
-            $request->session()->put('user_id', $user->user_id);
+            $request->session()->put('user_id', $user->id);
             $request->session()->put('name', $user->name);
             $request->session()->put('email', $user->email);
 
