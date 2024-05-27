@@ -1,5 +1,5 @@
 <x-layout-dashboard>
-    <x-slot:content>{{ $content }}</x-slot:content>
+    {{-- <x-slot:content>{{ $content }}</x-slot:content> --}}
     <div class="z-10 fixed top-0 w-full py-4 bg-base-100 h-16">
         <h2 class="text-2xl">Hello, {{ session()->get('name') }}</h2>
     </div>
@@ -98,25 +98,29 @@
                 </thead>
                 <tbody>
                     <!-- row 1 -->
-                    <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
-                        <td>
-                            <span class="text-red-500">10,000</span>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td>
-                            <span class="line-clamp-2">Paid Off
-                            </span>
-                        </td>
-                        <td>
-                            <span class="line-clamp-2">Expense
-                            </span>
-                        </td>
-                        <td>
-                            <a href="{{ route('userDebtDetail') }}" class="btn btn-ghost btn-xs">detailsTest</a>
-                        </td>
-                    </tr>
+                    @foreach ($transactions as $transaction)
+                        <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
+                            <td>
+                                <span class="text-red-500">{{ $transaction['amount'] }}</span>
+                            </td>
+                            <td>
+                                <span>{{ $transaction['created_at'] }}</span>
+                            </td>
+                            <td>
+                                <span class="line-clamp-2">
+                                    {{ $transaction['status_id'] }}
+                                </span>
+                            </td>
+                            <td>
+                                <span class="line-clamp-2">
+                                    {{ $transaction['category_id'] }}
+                                </span>
+                            </td>
+                            <td>
+                                <a href="{{ route('userDebtDetail') }}" class="btn btn-ghost btn-xs">detailsTest</a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
                 <!-- foot -->
             </table>
