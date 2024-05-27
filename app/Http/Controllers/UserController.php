@@ -18,7 +18,7 @@ class UserController extends Controller
                 'status_id' => $transaction['status_id'],
                 'category_id' => $transaction['category_id'],
                 'amount' => $transaction['amount'],
-                'created_at' => Carbon::parse($transaction['created_at'])->locale('id')->isoFormat('D MMMM YYYY'),
+                'created_at' => Carbon::parse($transaction['created_at'])->locale('id')->isoFormat('DD MMMM YYYY'),
                 'note' => $transaction['note'] ?: '',
             ];
         })->toArray();
