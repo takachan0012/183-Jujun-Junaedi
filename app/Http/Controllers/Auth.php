@@ -74,7 +74,6 @@ class Auth extends Controller
             $request->session()->put('user_id', $user->id);
             $request->session()->put('name', $user->name);
             $request->session()->put('email', $user->email);
-
             // Authentication successful, redirect to the dashboard
             return redirect()->route('dashboard');
         } else {
