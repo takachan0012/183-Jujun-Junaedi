@@ -16,7 +16,9 @@ class Transaction extends Model
         'customer_id',
         'category_id',
         'amount',
-        'note'
+        'note',
+        'updated_at',
+        'created_at',
     ];
 
     public function user(): BelongsTo
