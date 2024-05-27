@@ -14,14 +14,12 @@ return new class extends Migration
         //
         Schema::create('transactions', function (Blueprint $table) {
             $table->uuid('user_id');
-            $table->foreignId('status_id')->constrained('status_transaction');
-            $table->foreignId('customer_id')->constrained('customer_transaction');
-            $table->foreignId('category_id')->constrained('category_transaction');
+            $table->integer('status_id');
+            $table->integer('customer_id');
+            $table->integer('category_id');
             $table->decimal('amount', 15, 0);
             $table->timestamps();
             $table->text('note');
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
