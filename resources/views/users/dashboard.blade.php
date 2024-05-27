@@ -101,7 +101,8 @@
                     @foreach ($transactions as $transaction)
                         <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
                             <td>
-                                <span class="text-red-500">{{ $transaction['amount'] }}</span>
+                                <span
+                                    class="text-red-500">{{ 'Rp ' . number_format($transaction['amount'], 0, ',', '.') }}</span>
                             </td>
                             <td>
                                 <span>{{ $transaction['created_at'] }}</span>
