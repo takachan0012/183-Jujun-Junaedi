@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('category_id');
             $table->decimal('amount', 15, 0);
             $table->timestamps();
-            $table->text('note');
+            $table->text('note')->nullable();
         });
     }
 
