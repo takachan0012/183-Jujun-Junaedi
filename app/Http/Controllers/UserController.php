@@ -5,12 +5,24 @@ namespace App\Http\Controllers;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Models\User;
 
 class UserController extends Controller
 {
     public function dashboard()
     {
-        return view('users.dashboard', ['content' => '']);
+        $user = User::find(session()->get('user_id'));
+        $transactions = $user->transaction->map(function ($transaction) {
+            return [
+                'id' => $transaction['id'],
+                'status_id' => $transaction['status_id'],
+                'category_id' => $transaction['category_id'],
+                'amount' => $transaction['amount'],
+                'created_at' => Carbon::parse($transaction['created_at'])->locale('id')->isoFormat('D MMMM YYYY'),
+                'note' => $transaction['note'] ?: '',
+            ];
+        })->toArray();
+        return view('users.dashboard', ['transactions' => $transactions]);
     }
     public function debt()
     {
