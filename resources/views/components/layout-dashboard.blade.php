@@ -70,7 +70,6 @@
             </div>
         </div>
         <div class="mb-28 lg:h-fit lg:ml-[21%] lg:w-full p-4">
-            {{ $content }}
             {{ $slot }}
         </div>
     </div>
