@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             ]
         ]);
 
-        DB::table('status_transaction')->insert([
+        DB::table('status_transactions')->insert([
             [
                 'id' => 1,
                 'name' => 'Paid Off',
@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
             ]
         ]);
 
-        DB::table('category_transaction')->insert([
+        DB::table('category_transactions')->insert([
             [
                 'id' => 1,
                 'name' => 'Expense',
