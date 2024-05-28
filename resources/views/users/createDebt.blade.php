@@ -12,14 +12,14 @@
                         <div class="form-control p-4">
                             <label class="label cursor-pointer flex gap-2">
                                 <span class="label-text">Give to</span>
-                                <input type="radio" name="transaction" value="give-to"
-                                    class="radio checked:bg-red-500" checked />
+                                <input type="radio" name="status" value="2" class="radio checked:bg-red-500"
+                                    checked />
                             </label>
                         </div>
                         <div class="form-control p-4">
                             <label class="label cursor-pointer flex gap-2">
                                 <span class="label-text">Receive from</span>
-                                <input type="radio" name="transaction" value="receive-from"
+                                <input type="radio" name="status" value="3"
                                     class="radio checked:bg-green-primary" checked />
                             </label>
                         </div>
