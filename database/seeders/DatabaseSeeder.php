@@ -34,6 +34,10 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => 2,
                 'name' => 'Debt',
+            ],
+            [
+                'id' => 3,
+                'name' => 'Receivable',
             ]
         ]);
 
