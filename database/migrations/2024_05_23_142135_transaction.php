@@ -17,7 +17,7 @@ return new class extends Migration
             $table->uuid('user_id');
             $table->integer('status_id');
             $table->integer('customer_id');
-            $table->integer('category_id');
+            $table->integer('category_id')->nullable();
             $table->decimal('amount', 15, 0);
             $table->timestamps();
             $table->text('note')->nullable();
