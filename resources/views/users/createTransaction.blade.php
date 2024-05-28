@@ -7,7 +7,7 @@
             <form action="{{ route('createTransactionPost') }}" id="form" method="post">
                 @csrf
                 <h2 class="text-2xl text-center">Create Transaction</h2>
-                <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-4 p-2">
                     <div class="flex justify-between items-center">
                         <span class="text-md">Status</span>
                         <div class="flex gap-3 items-center">
