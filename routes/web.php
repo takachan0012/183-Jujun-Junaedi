@@ -48,6 +48,6 @@ Route::middleware(EnsureAuthenticated::class)->prefix('dashboard')->controller(U
     Route::get('/transaction/create', 'createTransaction')->name('createTransaction');
 
 
-    Route::post('/debt/create', 'createDebtPost')->name('createDebtPost');
+    Route::post('/debt/create', 'createTransactionPost')->name('createDebtPost');
     Route::post('/transaction/create', 'createTransactionPost')->name('createTransactionPost');
 });
