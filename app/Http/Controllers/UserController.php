@@ -48,6 +48,10 @@ class UserController extends Controller
     {
         return view('users.transaction', ['content' => 'Transaction']);
     }
+    public function createTransaction()
+    {
+        return view('users.createTransaction', ['content' => 'Transaction']);
+    }
 
     public function createDebtPost(Request $request)
     {

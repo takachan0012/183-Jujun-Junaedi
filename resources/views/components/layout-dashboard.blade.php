@@ -42,7 +42,7 @@
                     </a>
                     <a href="/dashboard/transaction" class="hover:text-green-primary">
                         <x-button
-                            class="{{ request()->is('dashboard/transaction') ? 'text-green-primary border-green-primary lg:border-r-2 lg:border-t-0' : '' }}">
+                            class="{{ Str::contains(request()->path(), 'transaction') ? 'text-green-primary border-green-primary lg:border-r-2 lg:border-t-0' : '' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"

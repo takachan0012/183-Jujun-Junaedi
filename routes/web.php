@@ -45,7 +45,9 @@ Route::middleware(EnsureAuthenticated::class)->prefix('dashboard')->controller(U
     Route::get('/debt/user/detail', 'userDebtDetail')->name('userDebtDetail'); //using ID for prod ex: /debt/{id}/{debt/tx Id}
     Route::get('/debt/user/detail/update', 'updateDebtDetail')->name('updateDebtDetail'); //using ID for prod ex: /debt/{id}/{debt/tx Id}
     Route::get('/transaction', 'transaction')->name('transaction');
+    Route::get('/transaction/create', 'createTransaction')->name('createTransaction');
 
 
     Route::post('/debt/create', 'createDebtPost')->name('createDebtPost');
+    Route::post('/transaction/create', 'createTransactionPost')->name('createTransactionPost');
 });

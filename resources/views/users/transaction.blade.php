@@ -9,7 +9,7 @@
             aria-label="Overview" checked />
         <div role="tabpanel" class="tab-content lg:p-10 overflow-x-hidden">
             <div class="flex flex-col gap-2 md:grid md:grid-cols-2 lg:grid-cols-4">
-                <a href="{{ route('createDebt') }}"
+                <a href="{{ route('createTransaction') }}"
                     class="w-full h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-green-primary hover:shadow-[inset_1px_1px_10px_#1db753] text-green-primary delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-9 h-9">
