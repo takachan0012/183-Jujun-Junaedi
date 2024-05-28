@@ -4,7 +4,7 @@
         <x-toastify title="Created Successfully" />
         <div>
             <x-button-back />
-            <form action="{{ route('createDebtPost') }}" id="form" method="post">
+            <form action="{{ route('createTransactionPost') }}" id="form" method="post">
                 @csrf
                 <h2 class="text-2xl text-center">Create Transaction</h2>
                 <div class="flex flex-col gap-4">
@@ -14,14 +14,14 @@
                             <div class="form-control p-4">
                                 <label class="label cursor-pointer flex gap-2">
                                     <span class="label-text">Debt</span>
-                                    <input type="radio" name="status" value="debt" class="radio checked:bg-red-500"
+                                    <input type="radio" name="status" value="2" class="radio checked:bg-red-500"
                                         checked />
                                 </label>
                             </div>
                             <div class="form-control p-4">
                                 <label class="label cursor-pointer flex gap-2">
                                     <span class="label-text">Paid Off</span>
-                                    <input type="radio" name="status" value="paid-off"
+                                    <input type="radio" name="status" value="1"
                                         class="radio checked:bg-green-primary" checked />
                                 </label>
                             </div>
@@ -33,14 +33,14 @@
                             <div class="form-control p-4">
                                 <label class="label cursor-pointer flex gap-2">
                                     <span class="label-text">Expense</span>
-                                    <input type="radio" name="category" value="expense"
+                                    <input type="radio" name="category" value="1"
                                         class="radio checked:bg-red-500" checked />
                                 </label>
                             </div>
                             <div class="form-control p-4">
                                 <label class="label cursor-pointer flex gap-2">
                                     <span class="label-text">Income</span>
-                                    <input type="radio" name="category" value="income"
+                                    <input type="radio" name="category" value="2"
                                         class="radio checked:bg-green-primary" checked />
                                 </label>
                             </div>
