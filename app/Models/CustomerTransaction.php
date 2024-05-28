@@ -10,6 +10,10 @@ class CustomerTransaction extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name'
+    ];
+
     function transaction()
     {
         return $this->hasMany(Transaction::class);
