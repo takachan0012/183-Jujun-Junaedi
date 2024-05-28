@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoryTransaction;
+use App\Models\CustomerTransaction;
+use App\Models\StatusTransaction;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\User;
+use Illuminate\Support\Str;
+
 
 class UserController extends Controller
 {
@@ -53,32 +58,42 @@ class UserController extends Controller
         return view('users.createTransaction', ['content' => 'Transaction']);
     }
 
-    public function createDebtPost(Request $request)
+    public function createTransactionPost(Request $request)
     {
         $amountString = $request->input('amount');
         // Remove non-numeric characters
         $amount = preg_replace('/[^0-9]/', '', $amountString);
         $date = Carbon::parse($request['date'])->setTimeFromTimeString(Carbon::now()->toTimeString())->format('Y-m-d H:i:s');
-
+        $status = StatusTransaction::find($request['status'])->toArray();
+        $category = CategoryTransaction::find($request['category'])->toArray();
+        $customerId = CustomerTransaction::where('name', strtolower($request['customer-name']))->first();
+        if ($customerId == null) {
+            CustomerTransaction::create([
+                'name' => $request['customer-name'],
+            ]);
+            $customerId = CustomerTransaction::where('name', strtolower($request['customer-name']))->first();
+        } else {
+            $customerId = $customerId->toArray();
+        }
         //Modify timestamps
-        Transaction::withoutTimestamps(function () use ($request, $amount, $date) {
+        Transaction::withoutTimestamps(function () use ($request, $amount, $date, $status, $category, $customerId) {
             Transaction::create([
-                'customer_id' => 1,
+                'customer_id' => $customerId['id'],
                 'amount' => $amount,
                 'note' => $request['note'],
                 'updated_at' => $date,
                 'created_at' => $date,
                 'user_id' => session()->get('user_id'),
-                'status_id' => 1,
-                'category_id' => 1
+                'status_id' => $status['id'],
+                'category_id' => $category['id'],
             ]);
         });
-        return redirect()->route('debt')->with('success', 'Debt created successfully.');
-
-
-
-        // $user = auth()->user();
-        // $user->transactions()->create($request->all());
-        // return redirect()->route('transaction')->with('success', 'Transaction created successfully.');
+        $routeName = [];
+        if (Str::contains(request()->path(), 'transaction')) {
+            $routeName = 'transaction';
+        } else {
+            $routeName = 'debt';
+        }
+        return redirect()->route($routeName);
     }
 }
