@@ -53,7 +53,7 @@
                         </svg>
                         <input type="date" class="grow" placeholder="Date" name="date" id="dateInput" />
                     </x-label-input>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" id="submitButton" class="btn btn-primary">Save</button>
                 </div>
             </form>
         </div>

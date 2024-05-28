@@ -82,10 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
     dateInput.value = formattedDate;
 
     // Add event listener to form submit
-    // document.getElementById('form').addEventListener('submit', function (event) {
-    //     event.preventDefault(); // Prevent form from submitting
-    //     showToast();
-    // });
+    document.getElementById('form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form from submitting
+        showToast();
+        setTimeout(function () {
+            event.target.submit(); // Submit the form after showing the toast
+            navigationBack();
+        }, 3000); // Adjust the delay as needed to match the toast display time
+    });
 
 });
 
@@ -110,10 +114,6 @@ function navigationBack() {
 function showToast() {
     const toastContainer = document.getElementById('toast-container');
     toastContainer.classList.remove('hidden');
-    setTimeout(() => {
-        toastContainer.classList.add('hidden');
-        navigationBack();
-    }, 3000); // Hide toast after 3 seconds
 }
 
 
