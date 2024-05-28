@@ -14,6 +14,7 @@ return new class extends Migration
         //
         Schema::create('transactions', function (Blueprint $table) {
             $table->uuid('user_id');
+            $table->uuid('id');
             $table->integer('status_id');
             $table->integer('customer_id');
             $table->integer('category_id');
