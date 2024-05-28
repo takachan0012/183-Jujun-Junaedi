@@ -65,7 +65,11 @@ class UserController extends Controller
         $amount = preg_replace('/[^0-9]/', '', $amountString);
         $date = Carbon::parse($request['date'])->setTimeFromTimeString(Carbon::now()->toTimeString())->format('Y-m-d H:i:s');
         $status = StatusTransaction::find($request['status'])->toArray();
-        $category = CategoryTransaction::find($request['category'])->toArray();
+        //Check if category is empty
+        $category = null;
+        if ($request->has('category')) {
+            $category = CategoryTransaction::find($request['category'])->toArray();
+        }
         $customerId = CustomerTransaction::where('name', strtolower($request['customer-name']))->first();
         if ($customerId == null) {
             CustomerTransaction::create([
@@ -80,12 +84,12 @@ class UserController extends Controller
             Transaction::create([
                 'customer_id' => $customerId['id'],
                 'amount' => $amount,
-                'note' => $request['note'],
+                'note' => $request['note'] ?: '',
                 'updated_at' => $date,
                 'created_at' => $date,
                 'user_id' => session()->get('user_id'),
                 'status_id' => $status['id'],
-                'category_id' => $category['id'],
+                'category_id' => $category != null ? $category['id'] : null,
             ]);
         });
         $routeName = [];
