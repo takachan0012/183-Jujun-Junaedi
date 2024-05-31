@@ -50,30 +50,34 @@
                 </thead>
                 <tbody>
                     <!-- row 1 -->
-                    <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
-                        <td>
-                            <span class="text-green-primary">10,000</span>
-                            <br />
-                            <span class="text-xs">My Debt</span>
-                        </td>
-                        <td>
-                            <div class="flex items-center gap-3">
-                                <div>
-                                    <div class="font-bold">Mikasa</div>
+                    @foreach ($debts as $debt)
+                        <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
+                            <td>
+                                <span
+                                    class="{{ $debt['status'] == 'Debt' ? 'text-red-500' : 'text-green-primary' }}">10,000</span>
+                                <br />
+                                <span
+                                    class="text-xs">{{ $debt['status'] == 'Debt' ? 'My Debt' : 'Customer Debt' }}</span>
+                            </td>
+                            <td>
+                                <div class="flex items-center gap-3">
+                                    <div>
+                                        <div class="font-bold">{{ $debt['customer_name'] }}</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span>2 Juni 2023</span>
-                        </td>
-                        <td>
-                            <span class="line-clamp-2">Paid Off
-                            </span>
-                        </td>
-                        <td>
-                            <a href="{{ route('userDebtDetail') }}" class="btn btn-ghost btn-xs">detailsTest</a>
-                        </td>
-                    </tr>
+                            </td>
+                            <td>
+                                <span>{{ $debt['created_at'] }}</span>
+                            </td>
+                            <td>
+                                <span class="line-clamp-2">{{ $debt['status'] }}
+                                </span>
+                            </td>
+                            <td>
+                                <a href="{{ route('userDebtDetail') }}" class="btn btn-ghost btn-xs">detailsTest</a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
                 <!-- foot -->
             </table>
@@ -102,19 +106,19 @@
                         <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
                             <td>
                                 <span
-                                    class="text-red-500">{{ 'Rp ' . number_format($transaction['amount'], 0, ',', '.') }}</span>
+                                    class="{{ $transaction['status'] == 'Debt' || $transaction['category'] == 'Expense' ? 'text-red-500' : 'text-green-primary' }}">{{ 'Rp ' . number_format($transaction['amount'], 0, ',', '.') }}</span>
                             </td>
                             <td>
                                 <span>{{ $transaction['created_at'] }}</span>
                             </td>
                             <td>
                                 <span class="line-clamp-2">
-                                    {{ $transaction['status_id'] }}
+                                    {{ $transaction['status'] }}
                                 </span>
                             </td>
                             <td>
                                 <span class="line-clamp-2">
-                                    {{ $transaction['category_id'] }}
+                                    {{ $transaction['category'] }}
                                 </span>
                             </td>
                             <td>

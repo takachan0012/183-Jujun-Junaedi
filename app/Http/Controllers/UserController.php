@@ -17,18 +17,23 @@ class UserController extends Controller
     public function dashboard()
     {
         $user = User::find(session()->get('user_id'));
-        $transactions = $user->transaction->map(function ($transaction) {
+        $transactions = $user->transaction()->orderBy('updated_at', 'desc')->take(10)->get();
+        $transactions = $transactions->map(function ($transaction) {
             return [
                 'id' => $transaction['id'],
-                'status_id' => $transaction->statusTransaction['name'] ?? '',
-                'category_id' => $transaction->categoryTransaction['name'] ?? '',
+                'status' => $transaction->statusTransaction['name'] ?? '-',
+                'category' => $transaction->categoryTransaction['name'] ?? '-',
+                'customer_name' => $transaction->customerTransaction['name'] ?? '-',
                 'amount' => $transaction['amount'],
                 'created_at' => Carbon::parse($transaction['created_at'])->locale('id')->isoFormat('DD MMMM YYYY'),
                 'note' => $transaction['note'] ?: '',
             ];
+        });
+        $debts = $transactions->filter(function ($transaction) {
+            return $transaction['status'] == 'Debt' || $transaction['status'] == 'Receivable';
         })->toArray();
-        dd($transactions);
-        return view('users.dashboard', ['transactions' => $transactions]);
+        $transactions = $transactions->toArray();
+        return view('users.dashboard', ['transactions' => $transactions, 'debts' => $debts]);
     }
     public function profile()
     {
