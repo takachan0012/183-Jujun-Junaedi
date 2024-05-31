@@ -54,7 +54,7 @@
                         <tr data-href="{{ route('userDebt') }}" class="hover:cursor-pointer">
                             <td>
                                 <span
-                                    class="{{ $debt['status'] == 'Debt' ? 'text-red-500' : 'text-green-primary' }}">10,000</span>
+                                    class="{{ $debt['status'] == 'Debt' ? 'text-red-500' : 'text-green-primary' }}">{{ 'Rp ' . number_format($debt['amount'], 0, ',', '.') }}</span>
                                 <br />
                                 <span
                                     class="text-xs">{{ $debt['status'] == 'Debt' ? 'My Debt' : 'Customer Debt' }}</span>
@@ -74,7 +74,8 @@
                                 </span>
                             </td>
                             <td>
-                                <a href="{{ route('userDebtDetail') }}" class="btn btn-ghost btn-xs">detailsTest</a>
+                                <a href="{{ route('userDebtDetail', ['id' => $debt['id']]) }}"
+                                    class="btn btn-ghost btn-xs">detailsTest</a>
                             </td>
                         </tr>
                     @endforeach

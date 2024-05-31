@@ -1,5 +1,5 @@
 <x-layout-dashboard>
-    <x-slot:content>{{ $content }}</x-slot:content>
+    {{-- <x-slot:content>{{ $content }}</x-slot:content> --}}
     <div class="flex justify-center items-center h-screen">
         <div class="md:w-1/2">
             <div class="flex justify-between">
@@ -46,23 +46,23 @@
                         <span>Customer</span>
                     </div>
                     <div class="flex flex-col text-right">
-                        <span>18 Mei 2023 22:53</span>
-                        <span>Jujun Junaedi</span>
+                        <span>{{ $transaction['created_at'] }}</span>
+                        <span>{{ ucfirst($transaction['customer_name']) }}</span>
                     </div>
                 </div>
                 <div
                     class="w-full text-xl font-bold flex justify-between border-t border-b border-dashed border-white py-2">
-                    <span>Debt Paid</span>
-                    <span>Rp10,000</span>
+                    <span>{{ $transaction['status'] }}</span>
+                    <span>{{ 'Rp ' . number_format($transaction['amount'], 0, ',', '.') }}</span>
                 </div>
                 {{-- IF DEBT NOT CONNECTED TO TRANSACTION THIS DIV HIDDEN --}}
                 <div class="w-full flex flex-col">
                     <span>Category:</span>
-                    <span>Category Content Here</span>
+                    <span>{{ $transaction['category'] }}</span>
                 </div>
                 <div class="w-full flex flex-col">
                     <span>Note:</span>
-                    <span>Note Content Here</span>
+                    <span>{{ $transaction['note'] }}</span>
                 </div>
                 <div>
                     <span>Made By</span>

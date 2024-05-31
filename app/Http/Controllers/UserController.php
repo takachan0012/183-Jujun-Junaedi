@@ -25,7 +25,7 @@ class UserController extends Controller
                 'category' => $transaction->categoryTransaction['name'] ?? '-',
                 'customer_name' => $transaction->customerTransaction['name'] ?? '-',
                 'amount' => $transaction['amount'],
-                'created_at' => Carbon::parse($transaction['created_at'])->locale('id')->isoFormat('DD MMMM YYYY'),
+                'created_at' => Carbon::parse($transaction['created_at'])->locale('id')->isoFormat('DD MMMM YYYY '),
                 'note' => $transaction['note'] ?: '',
             ];
         });
@@ -52,9 +52,20 @@ class UserController extends Controller
     {
         return view('users.userDebt', ['content' => '']);
     }
-    public function userDebtDetail()
+    public function userDebtDetail($id)
     {
-        return view('users.userDebtDetail', ['content' => '']);
+        $transaction = Transaction::find($id);
+        $transaction = [
+            'id' => $transaction->id,
+            'status' => $transaction->statusTransaction['name'] ?? '-',
+            'category' => $transaction->categoryTransaction['name'] ?? '-',
+            'customer_name' => $transaction->customerTransaction['name'] ?? '-',
+            'amount' => $transaction->amount,
+            'created_at' => Carbon::parse($transaction->created_at)->translatedFormat('d F Y H:i:s'),
+            'note' => $transaction->note ?: '',
+
+        ];
+        return view('users.userDebtDetail', ['transaction' => $transaction]);
     }
     public function updateDebtDetail()
     {
