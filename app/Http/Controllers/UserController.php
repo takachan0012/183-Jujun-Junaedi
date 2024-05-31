@@ -20,13 +20,14 @@ class UserController extends Controller
         $transactions = $user->transaction->map(function ($transaction) {
             return [
                 'id' => $transaction['id'],
-                'status_id' => $transaction['status_id'],
-                'category_id' => $transaction['category_id'],
+                'status_id' => $transaction->statusTransaction['name'] ?? '',
+                'category_id' => $transaction->categoryTransaction['name'] ?? '',
                 'amount' => $transaction['amount'],
                 'created_at' => Carbon::parse($transaction['created_at'])->locale('id')->isoFormat('DD MMMM YYYY'),
                 'note' => $transaction['note'] ?: '',
             ];
         })->toArray();
+        dd($transactions);
         return view('users.dashboard', ['transactions' => $transactions]);
     }
     public function profile()
