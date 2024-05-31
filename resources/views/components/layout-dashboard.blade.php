@@ -53,7 +53,7 @@
                             </span>
                         </x-button>
                     </a>
-                    <a href="/dashboard/profile" class="hover:text-green-primary">
+                    <a href="{{ route('profile') }}" class="hover:text-green-primary">
                         <x-button
                             class="{{ request()->is('dashboard/profile') ? 'text-green-primary border-green-primary lg:border-r-2 lg:border-t-0' : '' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

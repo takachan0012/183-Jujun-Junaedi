@@ -29,6 +29,11 @@ class UserController extends Controller
         })->toArray();
         return view('users.dashboard', ['transactions' => $transactions]);
     }
+    public function profile()
+    {
+        $user = User::find(session()->get('user_id'))->toArray();
+        return view('users.profile', ['user' => $user]);
+    }
     public function debt()
     {
         return view('users.debt', ['content' => '']);
@@ -99,5 +104,14 @@ class UserController extends Controller
             $routeName = 'debt';
         }
         return redirect()->route($routeName);
+    }
+
+    public function logout()
+    {
+        session()->forget('isLogged');
+        session()->forget('user_id');
+        session()->forget('name');
+        session()->forget('email');
+        return redirect()->route('loginPage');
     }
 }
