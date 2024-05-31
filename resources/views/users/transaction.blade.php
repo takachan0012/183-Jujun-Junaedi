@@ -7,7 +7,7 @@
         <input type="radio" name="my_tabs_1" role="tab"
             class="inline-block whitespace-nowrap tab pb-11 pt-7 bg-base-100  hover:cursor-pointer sticky top-16 z-10 mb-9"
             aria-label="Overview" checked />
-        <div role="tabpanel" class="tab-content lg:p-10 overflow-x-hidden">
+        <div role="tabpanel" class="mt-5 tab-content lg:p-10 overflow-x-hidden">
             <div class="flex flex-col gap-2 md:grid md:grid-cols-2 lg:grid-cols-4">
                 <a href="{{ route('createTransaction') }}"
                     class="w-full h-32 p-4 bg-base-100 border-[1px] border-[#ffffff1a] hover:border-green-primary hover:shadow-[inset_1px_1px_10px_#1db753] text-green-primary delay-100 transition-all ease-in flex flex-col items-center justify-center hover:cursor-pointer">
