@@ -25,7 +25,7 @@
                 </div>
             </div>
             {{-- IF DEBT NOT CONNECTED TO TRANSACTION THIS ACTION HIDDEN --}}
-            <a href=""
+            <button onclick="my_modal_2.showModal()"
                 class="flex justify-between p-4 bg-base-100 border-[1px] border-[#ffffff1a] rounded-md my-4">
                 <span>
                     Connected to transaction. View detail
@@ -34,7 +34,7 @@
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
-            </a>
+            </button>
             <div
                 class="p-4 bg-base-100 border-[1px] border-[#ffffff1a] rounded-md flex flex-col gap-7 items-center justify-center my-4">
                 <span class=" text-xl text-center font-bold">
@@ -69,6 +69,15 @@
                     <span class="text-xl text-green-primary">kunciKas</span>
                 </div>
             </div>
+            <dialog id="my_modal_2" class="modal">
+                <div class="modal-box">
+                    <h3 class="font-bold text-lg">Hello There!</h3>
+                    <p class="py-4">This feature still brewing</p>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                    <button>close</button>
+                </form>
+            </dialog>
         </div>
     </div>
 </x-layout-dashboard>
